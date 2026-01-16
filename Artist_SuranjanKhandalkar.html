@@ -256,7 +256,7 @@
         </ul>
         <!-- end sidebar nav -->
     </div>
-    <!-- end sidebar -->    <!-- player -->
+    <!-- end sidebar --> <!-- player -->
     <div class="player">
         <button class="player_openclose_btn" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -305,10 +305,8 @@
                             <!-- end title -->
 
                             <div class="artist_info">
-                                <div class="main__carousel-wrap">
-                                    <div
-                                        class="main__carousel main__carousel--podcasts owl-carousel main__list--playlist">
-
+                                <div class="row row--grid">
+                                    <div class="col-12 col-sm-6 col-lg-3">
                                         <div class="live">
                                             <div class="album__cover">
                                                 <img src="RAAGAS/Artist-thumb/SuranjanKhandalkar.jpg"
@@ -333,7 +331,9 @@
                                             </div>
                                             <h3 class="live__title">RAAG MISHRA BHAIRAVI</h3>
                                         </div>
+                                    </div>
 
+                                    <div class="col-12 col-sm-6 col-lg-3">
                                         <div class="live">
                                             <div class="album__cover">
                                                 <img src="RAAGAS/Artist-thumb/SuranjanKhandalkar.jpg"
@@ -359,7 +359,9 @@
                                             </div>
                                             <h3 class="live__title">RAAG MISHRA KAFI</h3>
                                         </div>
+                                    </div>
 
+                                    <div class="col-12 col-sm-6 col-lg-3">
                                         <div class="live">
                                             <div class="album__cover">
                                                 <img src="RAAGAS/Artist-thumb/SuranjanKhandalkar.jpg"
@@ -385,7 +387,9 @@
                                             </div>
                                             <h3 class="live__title">RAAG CHARUKESHI</h3>
                                         </div>
+                                    </div>
 
+                                    <div class="col-12 col-sm-6 col-lg-3">
                                         <div class="live">
                                             <div class="album__cover">
                                                 <img src="RAAGAS/Artist-thumb/SuranjanKhandalkar.jpg"
@@ -415,7 +419,7 @@
                             </div>
                             <!--  end More music  -->
 
-                            <h4> â— Education and Music Training : </h4>
+                            <h4> &#9679; Education and Music Training : </h4>
 
                             <div class="artist_info">
                                 <p>&emsp; &emsp; &emsp;
@@ -455,7 +459,8 @@
 
                                 <P class="toggle-text" style="display:none ;">
                                     &emsp; &emsp; &emsp;
-                                    â– Production <b> â€œMelodic Rhythmsâ€ </b> conceptualized and directed by Padmashree
+                                    â– Production <b> â€œMelodic Rhythmsâ€ </b> conceptualized and directed by
+                                    Padmashree
                                     Pandit Vijay Ghate; an amalgamation of Hindustani Art music repertoires of
                                     instrumental and percussion music along with Kathak Dance; performed in 25 concerts
                                     in several cosmopolitan cities in India.
@@ -463,14 +468,16 @@
 
                                 <P class="toggle-text" style="display:none ;">
                                     &emsp; &emsp; &emsp;
-                                    â– Production <b> â€œBeyond Bollywoodâ€</b> conceptualised and directed by Padmashree
+                                    â– Production <b> â€œBeyond Bollywoodâ€</b> conceptualised and directed by
+                                    Padmashree
                                     Pandit Vijay Ghate; to reiterate the identity of Indian classical music by
                                     presenting Bollywood songs which are based on HindustÄni RÄga. Performed in 15+
                                     concerts pan-India; </p>
 
                                 <P class="toggle-text" style="display:none ;">
                                     &emsp; &emsp; &emsp;
-                                    â– Production <b> â€œThe Triadâ€ </b> video released globally; confluence of Hollywood
+                                    â– Production <b> â€œThe Triadâ€ </b> video released globally; confluence of
+                                    Hollywood
                                     and
                                     Bollywood songs in a medley format and showcasing Tap dance with Kathak; musically
                                     ideated, rearranged, directed and sung songs of Classical, Sufi, Ghazal, Qawwali,
@@ -490,7 +497,7 @@
                                 </ul>
                                 <br>
 
-                                <a class="toggle-text-button">Read More â–¼</a>
+                                <a class="toggle-text-button">Read More &#9660;</a>
                             </div>
                             <br>
 
@@ -548,7 +555,7 @@
                                     <li> Classical voice of India award </li>
                                 </ul>
                                 <br>
-                                <a class="toggle-text-button">Read More â–¼</a>
+                                <a class="toggle-text-button">Read More &#9660;</a>
                             </div>
                             <!-- end article content -->
                         </div>
@@ -584,7 +591,7 @@
         $(document).on("click", ".toggle-text-button", function () {
 
             // Check if text is more or less
-            if ($(this).text() == "Read More â–¼") {
+            if ($(this).text() == "Read More &#9660;") {
 
                 // Change link text
                 $(this).text("Read Less â–²");
@@ -594,7 +601,7 @@
 
             } else {
                 // Change link text
-                $(this).text("Read More â–¼");
+                $(this).text("Read More &#9660;");
 
                 // Travel up DOM tree to parent, then find any children with CLASS .toggle-text and slide up 
                 $(this).parent().children(".toggle-text").slideUp();
@@ -684,5 +691,3 @@
 </body>
 
 </html>
-
-

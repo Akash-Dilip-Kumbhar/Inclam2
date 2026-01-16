@@ -256,7 +256,7 @@
         </ul>
         <!-- end sidebar nav -->
     </div>
-    <!-- end sidebar -->    <!-- player -->
+    <!-- end sidebar --> <!-- player -->
     <div class="player">
         <button class="player_openclose_btn" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -305,10 +305,8 @@
                             <!-- end title -->
 
                             <div class="artist_info">
-                                <div class="main__carousel-wrap ">
-                                    <div class="main__carousel main__carousel--podcasts owl-carousel main__list--playlist"
-                                        style="display: flex; justify-content: center;">
-
+                                <div class="row row--grid">
+                                    <div class="col-12 col-sm-6 col-lg-3">
                                         <div class="live">
                                             <div class="album__cover">
                                                 <img src="RAAGAS/Artist-thumb/VishalMoghe.jpg"
@@ -333,7 +331,9 @@
                                             </div>
                                             <h3 class="live__title">RAAG JAYJAYWANTI </h3>
                                         </div>
+                                    </div>
 
+                                    <div class="col-12 col-sm-6 col-lg-3">
                                         <div class="live">
                                             <div class="album__cover">
                                                 <img src="RAAGAS/Artist-thumb/VishalMoghe.jpg" alt="VishalMoghe">
@@ -362,7 +362,7 @@
 
                             <!--  end More music  -->
                             <div class="col">
-                                <h4> â— About Artist : </h4>
+                                <h4> &#9679; About Artist : </h4>
                                 <div class="artist_info">
                                     <p> &emsp; &emsp; &emsp; Vishal Moghe, from Gwalior, began singing at age 5 and
                                         later trained under Dr. Smita Sahastrabuddhe, Dr. Jayant Khot, and Pt. Balasaheb
@@ -390,7 +390,8 @@
                                         Saubhadra," "Ghashiram Kotwal," and "Oos Donga Pari," performed in cities
                                         including Mumbai, Pune, and Nagpur. He has also participated in Classical Music
                                         & Dance groups, traveling across India and Sri Lanka. Vishal provided playback
-                                        for the acclaimed Marathi film â€œBayo,â€ with music by Bhaskar Chandavarkar and
+                                        for the acclaimed Marathi film â€œBayo,â€ with music by Bhaskar Chandavarkar
+                                        and
                                         direction by Gajendra Ahire.
                                     </p>
 
@@ -400,7 +401,7 @@
                                         the most promising artistes who is dedicated to take forward the legacy of
                                         Indian Classical Music. </p>
 
-                                    <a class="toggle-text-button">Read More â–¼</a>
+                                    <a class="toggle-text-button">Read More &#9660;</a>
                                 </div>
                             </div>
 
@@ -450,9 +451,11 @@
                                         <li>First Prize in a competition organized by Balkrishna Bua Sangeet Sadhana
                                             Mandal, Ichalkarangi
                                         </li>
-                                        <li> First Prize in the Youth festival â€œIndradhanushyaâ€, organized by the Mumbai
+                                        <li> First Prize in the Youth festival â€œIndradhanushyaâ€, organized by the
+                                            Mumbai
                                             University, Government of Maharashtra</li>
-                                        <li>First Prize in the Dadar- Matunga Cultural Centerâ€™s Khayal Singing Contest,
+                                        <li>First Prize in the Dadar- Matunga Cultural Centerâ€™s Khayal Singing
+                                            Contest,
                                             Mumbai</li>
                                         <li>Second Prize in the Sangeet Sadhana Khayal Gayan Spardha, Sangli</li>
                                         <li>Second Prize in the Govindrao Gune All India Khayal Gayan Competition,
@@ -464,14 +467,15 @@
                                         <li> Second Prize in the All India Khayal Gayan Competition, organized by
                                             Brihanna Maharashtra Mandal, Rajkot </li>
 
-                                        <li> Second Prize in the State Level Youth Festival â€œIndradhanushya 04â€, Nagpur,
+                                        <li> Second Prize in the State Level Youth Festival â€œIndradhanushya 04â€,
+                                            Nagpur,
                                             organized by Government of Maharashtra </li>
 
                                         <li> Third Prize in the Vasantrao Chandorkar Music Competition, Jalgaon (2006)
                                         </li>
                                     </ul>
                                     <br>
-                                    <a class="toggle-text-button">Read More â–¼</a>
+                                    <a class="toggle-text-button">Read More &#9660;</a>
                                 </div>
                             </div>
                             <!-- end article content -->
@@ -507,7 +511,7 @@
         $(document).on("click", ".toggle-text-button", function () {
 
             // Check if text is more or less
-            if ($(this).text() == "Read More â–¼") {
+            if ($(this).text() == "Read More &#9660;") {
 
                 // Change link text
                 $(this).text("Read Less â–²");
@@ -517,7 +521,7 @@
 
             } else {
                 // Change link text
-                $(this).text("Read More â–¼");
+                $(this).text("Read More &#9660;");
 
                 // Travel up DOM tree to parent, then find any children with CLASS .toggle-text and slide up 
                 $(this).parent().children(".toggle-text").slideUp();
@@ -607,5 +611,3 @@
 </body>
 
 </html>
-
-

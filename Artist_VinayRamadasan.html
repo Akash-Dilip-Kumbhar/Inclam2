@@ -256,7 +256,7 @@
         </ul>
         <!-- end sidebar nav -->
     </div>
-    <!-- end sidebar -->    <!-- player -->
+    <!-- end sidebar --> <!-- player -->
     <div class="player">
         <button class="player_openclose_btn" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -307,10 +307,8 @@
                             <!-- end title -->
 
                             <div class="artist_info">
-                                <div class="main__carousel-wrap ">
-                                    <div class="main__carousel main__carousel--podcasts owl-carousel main__list--playlist"
-                                        style="display: flex; justify-content: center;">
-
+                                <div class="row row--grid">
+                                    <div class="col-12 col-sm-6 col-lg-3">
                                         <div class="live">
                                             <div class="album__cover">
                                                 <img src="RAAGAS/Artist-thumb/VinayRamadasan.jpg"
@@ -334,7 +332,9 @@
                                             </div>
                                             <h3 class="live__title">RAAG SHUDDHA SARANGA </h3>
                                         </div>
+                                    </div>
 
+                                    <div class="col-12 col-sm-6 col-lg-3">
                                         <div class="live">
                                             <div class="album__cover">
                                                 <img src="RAAGAS/Artist-thumb/VinayRamadasan.jpg"
@@ -363,7 +363,7 @@
 
                             <!--  end More music  -->
                             <div class="col">
-                                <h4> â— About Artist : </h4>
+                                <h4> &#9679; About Artist : </h4>
                                 <div class="artist_info">
 
                                     <p> &emsp; &emsp; &emsp; Vinay Ramadasan hails from a musical family in North Kerala
@@ -390,7 +390,7 @@
                                         Padmashree Taalyogi Pt. Suresh Talwalkar, the reputed Kathak Guru Vidushi Shama
                                         Bhate, and Smt. Durga Jasraj.
                                     </p>
-                                    <a class="toggle-text-button">Read More â–¼</a>
+                                    <a class="toggle-text-button">Read More &#9660;</a>
                                 </div>
                             </div>
 
@@ -418,7 +418,8 @@
                                         <li> He has also performed on A.I.R. (Pune), Doordarshan (Mumbai, Lucknow, Patna
                                             and National), Jai Hind T.V (Kerala) and Manorama News Channel (Kerala),
                                             Insync, etc </li>
-                                        <li> He has sung for T.V. serials like â€œKunjalimarakyaarâ€ on Surya TV, â€œMere
+                                        <li> He has sung for T.V. serials like â€œKunjalimarakyaarâ€ on Surya TV,
+                                            â€œMere
                                             Saiâ€ on Sony TV. </li>
                                         <li> He has composed music for many short films, television commercials and
                                             dance ballets. </li>
@@ -433,7 +434,8 @@
                                     <ul class="toggle-text" style="list-style:disc; display: none;">
                                         <li>
                                             In his journey in music, a few honorary awards have come his way too. He has
-                                            been bestowed with the prestigious title of â€˜Sangeet Pratibhaâ€™ by the King
+                                            been bestowed with the prestigious title of â€˜Sangeet Pratibhaâ€™ by the
+                                            King
                                             Of
                                             Kerala, His Highness Late Utradom Thirunaal Martanda Verma, at his Krishna
                                             Vilasom Palace, in the presence of the Cultural Minister of Kerala, Mr. P J
@@ -451,7 +453,7 @@
                                         </li>
                                     </ul>
                                     <br>
-                                    <a class="toggle-text-button">Read More â–¼</a>
+                                    <a class="toggle-text-button">Read More &#9660;</a>
                                 </div>
                             </div>
                             <!-- end article content -->
@@ -487,7 +489,7 @@
         $(document).on("click", ".toggle-text-button", function () {
 
             // Check if text is more or less
-            if ($(this).text() == "Read More â–¼") {
+            if ($(this).text() == "Read More &#9660;") {
 
                 // Change link text
                 $(this).text("Read Less â–²");
@@ -497,7 +499,7 @@
 
             } else {
                 // Change link text
-                $(this).text("Read More â–¼");
+                $(this).text("Read More &#9660;");
 
                 // Travel up DOM tree to parent, then find any children with CLASS .toggle-text and slide up 
                 $(this).parent().children(".toggle-text").slideUp();
@@ -587,5 +589,3 @@
 </body>
 
 </html>
-
-
