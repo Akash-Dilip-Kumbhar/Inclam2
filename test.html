@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>INCLAM Video Player</title>
+
+<style>
+/* basic reset */
+body {
+  background:#0e0e0e;
+  font-family: Arial, sans-serif;
+  color:#fff;
+  padding:20px;
+}
+
+/* PLAYER */
+.player {
+  max-width: 800px;
+  margin: auto;
+  background:#111;
+  padding:16px;
+  border-radius:12px;
+}
+
+.player__cover img {
+  width:100%;
+  max-height:180px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.player__track {
+  display:block;
+  margin:10px 0;
+  font-size:16px;
+}
+
+#ytPlayer {
+  width:100%;
+  height:360px; /* VIDEO HEIGHT */
+  display:block;
+  border-radius:12px;
+}
+
+/* PLAYLIST */
+.playlist {
+  max-width:800px;
+  margin:20px auto;
+}
+
+.playlist li {
+  list-style:none;
+  padding:12px;
+  border-bottom:1px solid #333;
+  cursor:pointer;
+}
+
+.playlist li:hover {
+  background:#1f1f1f;
+}
+</style>
+    <!-- updated CSS for video player By Akashkumbhar Jan2026 -->
+    <style>
+        /* PLAYER */
+        .player {
+            margin: auto;
+            background-color: #16151a;
+            border-radius: 12px;
+            transition: all 0.5s ease;
+            padding: 5px;
+            height: 0;
+        }
+
+        #ytPlayer {
+            width: 100%;
+            height: fit-content;
+            /* VIDEO HEIGHT */
+            display: block;
+            border-radius: 12px;
+        }
+
+        .player_openclose_btn {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #16151a;
+            border-radius: 12px 12px 0 0;
+            height: 40px;
+            width: 90px;
+            color: #fff;
+            font-size: 14px;
+            border: 1px solid #222227;
+            border-bottom: none;
+        }
+
+        .player.player--open {
+            transform: translateY(0);
+            /* JS will control real height */
+            border: 1px solid #25a5699a;
+            padding: 16px;
+            transition: all 0.5s ease;
+            box-shadow: -2px -3px 10px rgba(37, 165, 106, 0.5);
+        }
+
+        .player.player--open .player_openclose_btn {
+            border: 1px solid #25a5699a;
+            border-bottom: none;
+            box-shadow: -2px -4px 10px rgba(37, 165, 106, 0.5);
+        }
+
+        .player_openclose_btn svg {
+            fill: #25a56a;
+            width: 18px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- PLAYER -->
+<div class="player">
+  <div class="player__cover">
+    <img id="playerCover" src="https://dummyimage.com/800x400/003d64/ffffff&text=INCLAM" alt="">
+  </div>
+
+  <span class="player__track">
+    <b id="playerTitle">Raagas</b> â€“
+    <span id="playerArtist">Artist Name</span>
+  </span>
+
+  <iframe
+    id="ytPlayer"
+    src=""
+    title="INCLAM Video Player"
+    frameborder="0"
+    allow="autoplay; encrypted-media; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- PLAYLIST -->
+<ul class="playlist">
+  <li class="yt-item"
+      data-video-id="JzeiiuAZPNU"
+      data-title="Raag Ramkali"
+      data-artist="Jayateerth Mevundi"
+      data-img="https://dummyimage.com/800x400/222/fff&text=Raag+Ramkali">
+    â–¶ Raag Ramkali â€“ Jayateerth Mevundi
+  </li>
+
+  <li class="yt-item"
+      data-video-id="dQw4w9WgXcQ"
+      data-title="Raag Yaman"
+      data-artist="INCLAM"
+      data-img="https://dummyimage.com/800x400/444/fff&text=Raag+Yaman">
+    â–¶ Raag Yaman â€“ INCLAM
+  </li>
+</ul>
+
+<script>
+const ytPlayer = document.getElementById("ytPlayer");
+const playerTitle = document.getElementById("playerTitle");
+const playerArtist = document.getElementById("playerArtist");
+const playerCover = document.getElementById("playerCover");
+
+document.querySelectorAll(".yt-item").forEach(item => {
+  item.addEventListener("click", () => {
+    ytPlayer.src =
+      "https://www.youtube.com/embed/" +
+      item.dataset.videoId +
+      "?autoplay=1&rel=0";
+
+    playerTitle.textContent = item.dataset.title;
+    playerArtist.textContent = item.dataset.artist;
+    playerCover.src = item.dataset.img;
+  });
+});
+</script>
+
+    <!-- updated js for video player By Akashkumbhar Jan2026 -->
+    <script>
+        const ytPlayer = document.getElementById("ytPlayer");
+        const playerTitle = document.getElementById("playerTitle");
+        const playerArtist = document.getElementById("playerArtist");
+        const playerCover = document.getElementById("playerCover");
+
+        document.querySelectorAll(".yt-item").forEach(item => {
+            item.addEventListener("click", () => {
+
+                /* âœ… CHECK STATE FIRST */
+                const isActive = item.classList.contains("active");
+                const isPlaying = item.classList.contains("play");
+
+                /* reset all items */
+                document.querySelectorAll(".yt-item").forEach(el => {
+                    el.classList.remove("active", "play", "pause");
+                });
+
+                /* same item clicked again â†’ pause UI only */
+                if (isActive && isPlaying) {
+                    item.classList.add("active", "pause");
+                    return;
+                }
+
+                /* play state */
+                item.classList.add("active", "play");
+
+                ytPlayer.src =
+                    "https://www.youtube.com/embed/" +
+                    item.dataset.videoId +
+                    "?autoplay=1&rel=0";
+
+                playerTitle.textContent = item.dataset.title;
+                playerArtist.textContent = item.dataset.artist;
+
+                openPlayer();
+            });
+        });
+
+        /* ======================
+           PLAYER OPEN / CLOSE
+        ====================== */
+
+        const player = document.querySelector(".player");
+        const toggleBtn = document.querySelector(".player_openclose_btn");
+
+        let isOpen = false;
+
+        function openPlayer() {
+            if (isOpen) return;
+
+            player.classList.add("player--open");
+            player.style.height = player.scrollHeight + "px";
+            isOpen = true;
+        }
+
+        function closePlayer() {
+            player.style.height = player.scrollHeight + "px";
+
+            requestAnimationFrame(() => {
+                player.style.height = "0px";
+            });
+
+            player.classList.remove("player--open");
+            isOpen = false;
+        }
+
+        /* toggle on button click */
+        toggleBtn.addEventListener("click", () => {
+            isOpen ? closePlayer() : openPlayer();
+        });
+
+        /* after open animation â†’ allow auto height */
+        player.addEventListener("transitionend", () => {
+            if (isOpen) {
+                player.style.height = "auto";
+            }
+        });
+    </script>
+</body>
+</html>
+

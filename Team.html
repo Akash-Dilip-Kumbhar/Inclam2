@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Classical Music Platform">
+	<meta name="keywords" content="Inclam">
+	<meta name="author" content=" Probus software">
+	<title>Inclam â€“ Indian Classical Music Platform</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/select2.min.css">
+	<link rel="stylesheet" href="css/paymentfont.min.css">
+	<link rel="stylesheet" href="css/slider-radio.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="icon/Inclam.png" sizes="64x64">
+	<link rel="apple-touch-icon" href="icon/Inclam.png">
+    <!-- updated CSS for video player By Akashkumbhar Jan2026 -->
+    <style>
+        /* PLAYER */
+        .player {
+            margin: auto;
+            background-color: #16151a;
+            border-radius: 12px;
+            transition: all 0.5s ease;
+            padding: 5px;
+            height: 0;
+        }
+
+        #ytPlayer {
+            width: 100%;
+            height: fit-content;
+            /* VIDEO HEIGHT */
+            display: block;
+            border-radius: 12px;
+        }
+
+        .player_openclose_btn {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #16151a;
+            border-radius: 12px 12px 0 0;
+            height: 40px;
+            width: 90px;
+            color: #fff;
+            font-size: 14px;
+            border: 1px solid #222227;
+            border-bottom: none;
+        }
+
+        .player.player--open {
+            transform: translateY(0);
+            /* JS will control real height */
+            border: 1px solid #25a5699a;
+            padding: 16px;
+            transition: all 0.5s ease;
+            box-shadow: -2px -3px 10px rgba(37, 165, 106, 0.5);
+        }
+
+        .player.player--open .player_openclose_btn {
+            border: 1px solid #25a5699a;
+            border-bottom: none;
+            box-shadow: -2px -4px 10px rgba(37, 165, 106, 0.5);
+        }
+
+        .player_openclose_btn svg {
+            fill: #25a56a;
+            width: 18px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="header__content">
+			<div class="header__logo">
+				<a href="index.html">
+					<img src="img/logo/Inclam.png" alt="Logo">
+				</a>
+			</div>
+
+			<nav class="header__nav">
+				<a href="team.html">Team</a>
+				<a href="about_project.html">About Project</a>
+				<a href="Contact.html">Contact</a>
+				<a href="Acknowledgements.html">Acknowledgements</a>
+				<a href="Testimonials.html">Testimonials</a>
+			</nav>
+
+			<form action="#" class="header__search">
+				<input type="text" placeholder="Artist, track or podcast">
+				<button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path
+							d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z" />
+					</svg></button>
+				<button type="button" class="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path
+							d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
+					</svg></button>
+			</form>
+
+			<button class="header__btn" type="button">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</header>
+	<!-- end header -->
+
+	<!-- sidebar -->
+	<div class="sidebar">
+		<!-- sidebar logo -->
+		<div class="sidebar__logo">
+			<a href="index.html">
+				<img src="img/logo/Inclam.png" alt="Logo">
+			</a>
+		</div>
+		<!-- end sidebar logo -->
+
+		<!-- sidebar nav -->
+		<ul class="sidebar__nav">
+			<li class="sidebar__nav-item">
+				<a href="index.html" class="sidebar__nav-link">
+					<svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M21 8.77217L14.0208 1.79299C12.8492 0.621414 10.9497 0.621413 9.77817 1.79299L3 8.57116V23.0858H10V17.0858C10 15.9812 10.8954 15.0858 12 15.0858C13.1046 15.0858 14 15.9812 14 17.0858V23.0858H21V8.77217ZM11.1924 3.2072L5 9.39959V21.0858H8V17.0858C8 14.8767 9.79086 13.0858 12 13.0858C14.2091 13.0858 16 14.8767 16 17.0858V21.0858H19V9.6006L12.6066 3.2072C12.2161 2.81668 11.5829 2.81668 11.1924 3.2072Z" />
+					</svg>
+					<span>Home</span>
+				</a>
+			</li>
+			<li class="sidebar__nav-item">
+				<a href="artists.html" class="sidebar__nav-link">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path
+							d="M12.3,12.22A4.92,4.92,0,0,0,14,8.5a5,5,0,0,0-10,0,4.92,4.92,0,0,0,1.7,3.72A8,8,0,0,0,1,19.5a1,1,0,0,0,2,0,6,6,0,0,1,12,0,1,1,0,0,0,2,0A8,8,0,0,0,12.3,12.22ZM9,11.5a3,3,0,1,1,3-3A3,3,0,0,1,9,11.5Zm9.74.32A5,5,0,0,0,15,3.5a1,1,0,0,0,0,2,3,3,0,0,1,3,3,3,3,0,0,1-1.5,2.59,1,1,0,0,0-.5.84,1,1,0,0,0,.45.86l.39.26.13.07a7,7,0,0,1,4,6.38,1,1,0,0,0,2,0A9,9,0,0,0,18.74,11.82Z" />
+					</svg> <span>Artists</span>
+				</a>
+			</li>
+
+			<li class="sidebar__nav-item">
+				<a href="AllRaga.html" class="sidebar__nav-link">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M22 6.00086C22 3.54932 19.8148 1.6746 17.3918 2.04737L10.3918 3.1243C8.44044 3.4245 7 5.1035 7 7.07778V15.8407C6.54537 15.6248 6.0368 15.5039 5.5 15.5039C3.567 15.5039 2 17.0709 2 19.0039C2 20.9369 3.567 22.5039 5.5 22.5039C7.43296 22.5039 8.99994 20.937 9 19.004V7.07778C9 6.09064 9.72022 5.25114 10.6959 5.10104L17.6959 4.02412C18.9074 3.83773 20 4.77509 20 6.00086V12.8407C19.5454 12.6248 19.0368 12.5039 18.5 12.5039C16.567 12.5039 15 14.0709 15 16.0039C15 17.9369 16.567 19.5039 18.5 19.5039C20.433 19.5039 21.9999 17.937 22 16.004V6.00086ZM20 16.0039C20 15.1755 19.3284 14.5039 18.5 14.5039C17.6716 14.5039 17 15.1755 17 16.0039C17 16.8323 17.6716 17.5039 18.5 17.5039C19.3284 17.5039 19.9999 16.8323 20 16.0039ZM7 19.0039C7 18.1755 6.32843 17.5039 5.5 17.5039C4.67157 17.5039 4 18.1755 4 19.0039C4 19.8323 4.67157 20.5039 5.5 20.5039C6.32839 20.5039 6.99994 19.8323 7 19.0039Z" />
+					</svg>
+					<span>All Raagas (52)</span>
+				</a>
+			</li>
+
+			<li class="sidebar__nav-item">
+				<a href="playlist.html" class="sidebar__nav-link">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M16 5H4V7H16V5Z" />
+						<path d="M16 9H4V11H16V9Z" />
+						<path d="M4 13H12V15H4V13Z" />
+						<path d="M20 16L14 13V19L20 16Z" />
+					</svg>
+					<span> Playlist by Time </span>
+				</a>
+			</li>
+
+			<li class="sidebar__nav-item">
+				<a href="Team.html" class="sidebar__nav-link">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7ZM14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z" />
+						<path
+							d="M16 15C16 14.4477 15.5523 14 15 14H9C8.44772 14 8 14.4477 8 15V21H6V15C6 13.3431 7.34315 12 9 12H15C16.6569 12 18 13.3431 18 15V21H16V15Z" />
+					</svg>
+					<span>Team</span>
+				</a>
+			</li>
+
+			<li class="sidebar__nav-item">
+				<a href="Contact.html" class="sidebar__nav-link">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+						<path
+							d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 400H48V80h480v352zM208 256c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2zM360 320h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8z" />
+					</svg>
+					<span>Contact</span>
+				</a>
+			</li>
+
+			<li class="sidebar__nav-item">
+				<a href="Gallery.html" class="sidebar__nav-link">
+					<svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M7 7C5.34315 7 4 8.34315 4 10C4 11.6569 5.34315 13 7 13C8.65685 13 10 11.6569 10 10C10 8.34315 8.65685 7 7 7ZM6 10C6 9.44772 6.44772 9 7 9C7.55228 9 8 9.44772 8 10C8 10.5523 7.55228 11 7 11C6.44772 11 6 10.5523 6 10Z"
+							fill="currentColor" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H3C2.44772 5 2 5.44772 2 6V18C2 18.5523 2.44772 19 3 19H7.31374L14.1924 12.1214C15.364 10.9498 17.2635 10.9498 18.435 12.1214L22 15.6863V6C22 5.44772 21.5523 5 21 5ZM21 19H10.1422L15.6066 13.5356C15.9971 13.145 16.6303 13.145 17.0208 13.5356L21.907 18.4217C21.7479 18.7633 21.4016 19 21 19Z"
+							fill="currentColor" />
+					</svg>
+					<span>Gallery </span>
+				</a>
+			</li>
+
+			<li class="sidebar__nav-item_hidden">
+				<a href="About_project.html" class="sidebar__nav-link">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M2 8C2 7.44772 2.44772 7 3 7H21C21.5523 7 22 7.44772 22 8C22 8.55228 21.5523 9 21 9H3C2.44772 9 2 8.55228 2 8Z"
+							fill="currentColor" />
+
+						<path
+							d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
+							fill="currentColor" />
+
+						<path
+							d="M3 15C2.44772 15 2 15.4477 2 16C2 16.5523 2.44772 17 3 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H3Z"
+							fill="currentColor" />
+					</svg>
+					<span> About Project</span>
+				</a>
+			</li>
+
+			<li class="sidebar__nav-item_hidden">
+				<a href="Acknowledgements.html" class="sidebar__nav-link">
+					<svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M14 0C16.7614 0 19 2.23858 19 5V17C19 20.866 15.866 24 12 24C8.13401 24 5 20.866 5 17V9H7V17C7 19.7614 9.23858 22 12 22C14.7614 22 17 19.7614 17 17V5C17 3.34315 15.6569 2 14 2C12.3431 2 11 3.34315 11 5V17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V6H15V17C15 18.6569 13.6569 20 12 20C10.3431 20 9 18.6569 9 17V5C9 2.23858 11.2386 0 14 0Z" />
+					</svg>
+					<span> Acknowledgements </span>
+				</a>
+			</li>
+
+			<li class="sidebar__nav-item_hidden">
+				<a href="Testimonials.html" class="sidebar__nav-link">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M17 9H7V7H17V9Z" fill="currentColor" />
+						<path d="M7 13H17V11H7V13Z" fill="currentColor" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M2 18V2H22V18H16V22H14C11.7909 22 10 20.2091 10 18H2ZM12 16V18C12 19.1046 12.8954 20 14 20V16H20V4H4V16H12Z"
+							fill="currentColor" />
+					</svg>
+					<span> Testimonials </span>
+				</a>
+			</li>
+		</ul>
+		<!-- end sidebar nav -->
+	</div>
+	<!-- end sidebar -->
+
+	<!-- player -->
+	<div class="player">
+		<div class="player__cover">
+			<img src="">
+		</div>
+
+		<div class="player__content">
+			<span data-playlist class="player__track"><b class="player__title">Raagas</b> â€“
+				<span class="player__artist">Artist Name</span>
+			</span>
+			<audio id="audio" controls></audio>
+		</div>
+	</div>
+
+	<button class="player__btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path
+				d="M21.65,2.24a1,1,0,0,0-.8-.23l-13,2A1,1,0,0,0,7,5V15.35A3.45,3.45,0,0,0,5.5,15,3.5,3.5,0,1,0,9,18.5V10.86L20,9.17v4.18A3.45,3.45,0,0,0,18.5,13,3.5,3.5,0,1,0,22,16.5V3A1,1,0,0,0,21.65,2.24ZM5.5,20A1.5,1.5,0,1,1,7,18.5,1.5,1.5,0,0,1,5.5,20Zm13-2A1.5,1.5,0,1,1,20,16.5,1.5,1.5,0,0,1,18.5,18ZM20,7.14,9,8.83v-3L20,4.17Z" />
+		</svg> Player
+	</button>
+	<!-- end player -->
+
+	<!-- main content -->
+	<main class="main">
+		<div class="container-fluid">
+			<!-- artists -->
+			<div class="row row--grid">
+				<!-- breadcrumb -->
+				<div class="col-12">
+					<ul class="breadcrumb">
+						<li class="breadcrumb__item"><a href="index.html">Home</a></li>
+						<li class="breadcrumb__item breadcrumb__item--active">Team</li>
+					</ul>
+				</div>
+			</div>
+			<!-- end breadcrumb -->
+
+			<!-- title -->
+			<div class="col-12">
+				<div class="main__title .main__carousel--artists">
+					<h1>Team</h1>
+				</div>
+			</div>
+			<!-- end title -->
+
+			<div class="row row--grid">
+				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+					<a href="Artist_RPKaramblekar.html" class="artist">
+						<div class="artist__cover">
+							<img src="img/artists/Dr. R P KARAMBALEKAR/Dr. R P KARAMBLEKAR.jpg" alt="RPKaramblekar"
+								loading="lazy">
+						</div>
+						<h3 class="artist__title">Dr. R. P. Karambelkar </h3>
+					</a>
+				</div>
+
+				<div class="col-6 col-sm-4 col-md-3 col-xl-2 ">
+					<a href="Artist_RajivTambe.html" class="artist">
+						<div class="artist__cover">
+							<img src="img/artists/RAJIV TAMBE/RAJIV TAMBE.jpg" alt="RajivTambe" loading="lazy">
+						</div>
+						<h3 class="artist__title"> Rajiv Tambe</h3>
+					</a>
+				</div>
+
+				<div class="col-6 col-sm-4 col-md-3 col-xl-2 ">
+					<a href="Artist_AnkitaTambe.html" class="artist">
+						<div class="artist__cover">
+							<img src="RAAGAS/Artist-thumb/AnkitaTambe.jpg" alt="AnkitaTambe" loading="lazy">
+						</div>
+						<h3 class="artist__title">Ankita Tambe</h3>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- end artists -->
+	</main>
+	<!-- end main content -->
+
+	<!-- footer -->
+	<footer class="footer">
+		<small class="footer__copyright">Â© INCLAM, 2022. CREATED BY, <a href="https://probus.co.in/" target="_blank">
+				PROBUS STUDIO.</a>
+		</small>
+	</footer>
+	<!-- end footer -->
+
+	<!-- JS -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/smooth-scrollbar.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/slider-radio.js"></script>
+	<script src="js/jquery.inputmask.min.js"></script>
+	<script src="js/plyr.min.js"></script>
+	<script src="js/main.js"></script>
+    <!-- updated js for video player By Akashkumbhar Jan2026 -->
+    <script>
+        const ytPlayer = document.getElementById("ytPlayer");
+        const playerTitle = document.getElementById("playerTitle");
+        const playerArtist = document.getElementById("playerArtist");
+        const playerCover = document.getElementById("playerCover");
+
+        document.querySelectorAll(".yt-item").forEach(item => {
+            item.addEventListener("click", () => {
+
+                /* âœ… CHECK STATE FIRST */
+                const isActive = item.classList.contains("active");
+                const isPlaying = item.classList.contains("play");
+
+                /* reset all items */
+                document.querySelectorAll(".yt-item").forEach(el => {
+                    el.classList.remove("active", "play", "pause");
+                });
+
+                /* same item clicked again â†’ pause UI only */
+                if (isActive && isPlaying) {
+                    item.classList.add("active", "pause");
+                    return;
+                }
+
+                /* play state */
+                item.classList.add("active", "play");
+
+                ytPlayer.src =
+                    "https://www.youtube.com/embed/" +
+                    item.dataset.videoId +
+                    "?autoplay=1&rel=0";
+
+                playerTitle.textContent = item.dataset.title;
+                playerArtist.textContent = item.dataset.artist;
+
+                openPlayer();
+            });
+        });
+
+        /* ======================
+           PLAYER OPEN / CLOSE
+        ====================== */
+
+        const player = document.querySelector(".player");
+        const toggleBtn = document.querySelector(".player_openclose_btn");
+
+        let isOpen = false;
+
+        function openPlayer() {
+            if (isOpen) return;
+
+            player.classList.add("player--open");
+            player.style.height = player.scrollHeight + "px";
+            isOpen = true;
+        }
+
+        function closePlayer() {
+            player.style.height = player.scrollHeight + "px";
+
+            requestAnimationFrame(() => {
+                player.style.height = "0px";
+            });
+
+            player.classList.remove("player--open");
+            isOpen = false;
+        }
+
+        /* toggle on button click */
+        toggleBtn.addEventListener("click", () => {
+            isOpen ? closePlayer() : openPlayer();
+        });
+
+        /* after open animation â†’ allow auto height */
+        player.addEventListener("transitionend", () => {
+            if (isOpen) {
+                player.style.height = "auto";
+            }
+        });
+    </script>
+</body>
+
+</html>
