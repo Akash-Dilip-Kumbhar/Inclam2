@@ -130,7 +130,7 @@ body {
   </div>
 
   <span class="player__track">
-    <b id="playerTitle">Raagas</b> â€“
+    <b id="playerTitle">Raagas</b> -
     <span id="playerArtist">Artist Name</span>
   </span>
 
@@ -151,7 +151,7 @@ body {
       data-title="Raag Ramkali"
       data-artist="Jayateerth Mevundi"
       data-img="https://dummyimage.com/800x400/222/fff&text=Raag+Ramkali">
-    â–¶ Raag Ramkali â€“ Jayateerth Mevundi
+    â–¶ Raag Ramkali - Jayateerth Mevundi
   </li>
 
   <li class="yt-item"
@@ -159,29 +159,11 @@ body {
       data-title="Raag Yaman"
       data-artist="INCLAM"
       data-img="https://dummyimage.com/800x400/444/fff&text=Raag+Yaman">
-    â–¶ Raag Yaman â€“ INCLAM
+    â–¶ Raag Yaman - INCLAM
   </li>
 </ul>
 
-<script>
-const ytPlayer = document.getElementById("ytPlayer");
-const playerTitle = document.getElementById("playerTitle");
-const playerArtist = document.getElementById("playerArtist");
-const playerCover = document.getElementById("playerCover");
 
-document.querySelectorAll(".yt-item").forEach(item => {
-  item.addEventListener("click", () => {
-    ytPlayer.src =
-      "https://www.youtube.com/embed/" +
-      item.dataset.videoId +
-      "?autoplay=1&rel=0";
-
-    playerTitle.textContent = item.dataset.title;
-    playerArtist.textContent = item.dataset.artist;
-    playerCover.src = item.dataset.img;
-  });
-});
-</script>
 
     <!-- updated js for video player By Akashkumbhar Jan2026 -->
     <script>
