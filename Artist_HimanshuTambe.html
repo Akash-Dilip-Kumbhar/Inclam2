@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,14 +19,7 @@
     <link rel="stylesheet" href="css/slider-radio.css">
     <link rel="stylesheet" href="css/plyr.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" href="icon/Inclam.png" sizes="64x64">
-    <link rel="apple-touch-icon" href="icon/Inclam.png">
-
-    <!-- updated CSS for video player By Akashkumbhar Jan2026 -->
     <style>
-        /* PLAYER */
         .player {
             margin: auto;
             background-color: #16151a;
@@ -39,7 +32,6 @@
         #ytPlayer {
             width: 100%;
             height: fit-content;
-            /* VIDEO HEIGHT */
             display: block;
             border-radius: 12px;
         }
@@ -65,7 +57,6 @@
 
         .player.player--open {
             transform: translateY(0);
-            /* JS will control real height */
             border: 1px solid #25a5699a;
             padding: 16px;
             transition: all 0.5s ease;
@@ -84,6 +75,9 @@
             margin-right: 10px;
         }
     </style>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="icon/Inclam.png" sizes="64x64">
+    <link rel="apple-touch-icon" href="icon/Inclam.png">
 </head>
 
 <body>
@@ -127,15 +121,11 @@
 
     <!-- sidebar -->
     <div class="sidebar">
-        <!-- sidebar logo -->
         <div class="sidebar__logo">
             <a href="index.html">
                 <img src="img/logo/Inclam.png" alt="Logo">
             </a>
         </div>
-        <!-- end sidebar logo -->
-
-        <!-- sidebar nav -->
         <ul class="sidebar__nav">
             <li class="sidebar__nav-item">
                 <a href="index.html" class="sidebar__nav-link">
@@ -154,7 +144,7 @@
                     </svg> <span>Artists</span>
                 </a>
             </li>
-
+            <!-- Other sidebar items omitted for brevity but should be kept if copying full structure -->
             <li class="sidebar__nav-item">
                 <a href="AllRaga.html" class="sidebar__nav-link">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,7 +154,6 @@
                     <span>All Raagas (67)</span>
                 </a>
             </li>
-
             <li class="sidebar__nav-item">
                 <a href="playlist.html" class="sidebar__nav-link">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,7 +165,6 @@
                     <span> Playlist by Time </span>
                 </a>
             </li>
-
             <li class="sidebar__nav-item">
                 <a href="Team.html" class="sidebar__nav-link">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,7 +176,6 @@
                     <span>Team</span>
                 </a>
             </li>
-
             <li class="sidebar__nav-item">
                 <a href="Contact.html" class="sidebar__nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -198,7 +185,6 @@
                     <span>Contact</span>
                 </a>
             </li>
-
             <li class="sidebar__nav-item">
                 <a href="Gallery.html" class="sidebar__nav-link">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -212,50 +198,7 @@
                     <span>Gallery </span>
                 </a>
             </li>
-
-            <li class="sidebar__nav-item_hidden">
-                <a href="About_project.html" class="sidebar__nav-link">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2 8C2 7.44772 2.44772 7 3 7H21C21.5523 7 22 7.44772 22 8C22 8.55228 21.5523 9 21 9H3C2.44772 9 2 8.55228 2 8Z"
-                            fill="currentColor" />
-
-                        <path
-                            d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
-                            fill="currentColor" />
-
-                        <path
-                            d="M3 15C2.44772 15 2 15.4477 2 16C2 16.5523 2.44772 17 3 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H3Z"
-                            fill="currentColor" />
-                    </svg>
-                    <span> About Project</span>
-                </a>
-            </li>
-
-            <li class="sidebar__nav-item_hidden">
-                <a href="Acknowledgements.html" class="sidebar__nav-link">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M14 0C16.7614 0 19 2.23858 19 5V17C19 20.866 15.866 24 12 24C8.13401 24 5 20.866 5 17V9H7V17C7 19.7614 9.23858 22 12 22C14.7614 22 17 19.7614 17 17V5C17 3.34315 15.6569 2 14 2C12.3431 2 11 3.34315 11 5V17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V6H15V17C15 18.6569 13.6569 20 12 20C10.3431 20 9 18.6569 9 17V5C9 2.23858 11.2386 0 14 0Z" />
-                    </svg>
-                    <span> Acknowledgements </span>
-                </a>
-            </li>
-
-            <li class="sidebar__nav-item_hidden">
-                <a href="Testimonials.html" class="sidebar__nav-link">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17 9H7V7H17V9Z" fill="currentColor" />
-                        <path d="M7 13H17V11H7V13Z" fill="currentColor" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M2 18V2H22V18H16V22H14C11.7909 22 10 20.2091 10 18H2ZM12 16V18C12 19.1046 12.8954 20 14 20V16H20V4H4V16H12Z"
-                            fill="currentColor" />
-                    </svg>
-                    <span> Testimonials </span>
-                </a>
-            </li>
         </ul>
-        <!-- end sidebar nav -->
     </div>
     <!-- end sidebar -->
 
@@ -269,13 +212,11 @@
             Player
         </button>
         <span class="player__track">
-            <b id="playerTitle">Raagas</b> –
+            <b id="playerTitle">Raagas</b> -
             <span id="playerArtist">Artist Name</span>
         </span>
-
-        <iframe id="ytPlayer" src="https://www.youtube.com/embed/vUYSAT3vcAQ" frameborder="0"
-            allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
-        </iframe>
+        <iframe id="ytPlayer" src="" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen></iframe>
     </div>
     <!-- end player -->
 
@@ -284,30 +225,26 @@
         <div class="container-fluid">
             <div class="row row--grid">
                 <div class="col-12">
-                                        <!-- Breadcrumb -->
-                    <ul style="display: flex; list-style: none; padding: 0; margin-bottom: 20px; font-size: 14px; color: #bbb;">
+                    <!-- Breadcrumb -->
+                    <ul
+                        style="display: flex; list-style: none; padding: 0; margin-bottom: 20px; font-size: 14px; color: #bbb;">
                         <li><a href="index.html" style="color: #bbb; text-decoration: none;">Home</a></li>
                         <li style="margin: 0 8px;">/</li>
                         <li><a href="artists.html" style="color: #bbb; text-decoration: none;">Artists</a></li>
                         <li style="margin: 0 8px;">/</li>
-                        <li style="color: #25a56a;">Mahesh Kale</li>
+                        <li style="color: #25a56a;">Himanshu Tambe</li>
                     </ul>
                     <!-- end breadcrumb -->
                     <div class="article article--page">
                         <!-- article content -->
                         <div class="article__content">
                             <div class="article__artist">
-                                <img src="RAAGAS/Artist-thumb/MaheshKale.webp" alt="MaheshKale" loading="lazy">
+                                <img src="RAAGAS/Artist-thumb/HimanshuTambe.webp" alt="HimanshuTambe" loading="lazy">
                                 <div>
-                                    <h1>Mahesh Kale</h1>
-                                    <span>Indian Classical Vocalists</span>
-                                    <p> Mahesh is one of the most sought-after performers globally and has performed
-                                        extensively in India, USA, Canada, Europe, UAE, Southeast Asia, and Australia.
-                                        From prestigious music conferences like the Sawai Gandharva Sangeet Mahotsav
-                                        (Pune), Saptak Festival (Ahmedabad) to unlikely venues like the NH7 weekender
-                                        and Stanford Jazz Festival, Mahesh is truly a global ambassador of Indian
-                                        Classical Music. He is also a popular judge on the Sur Nava Dhyas Nava TV show
-                                        on Colors Marathi channel.
+                                    <h1>Himanshu Tambe</h1>
+                                    <span>Indian classical vocalist</span>
+                                    <p>
+                                        Renowned Indian classical vocalist known for his mastery over various Raagas.
                                     </p>
                                 </div>
                             </div>
@@ -315,7 +252,7 @@
 
                             <!-- title -->
                             <div class="main__title">
-                                <h2>Raga's From Mahesh Kale</h2>
+                                <h2>Raga's From Himanshu Tambe</h2>
                             </div>
                             <!-- end title -->
 
@@ -324,14 +261,14 @@
                                     <div class="col-12 col-sm-6 col-lg-3">
                                         <div class="live">
                                             <div class="album__cover">
-                                                <img src="RAAGAS/Artist-thumb/MaheshKale.webp" alt="MaheshKale"
+                                                <img src="RAAGAS/Artist-thumb/HimanshuTambe.webp" alt="HimanshuTambe"
                                                     loading="lazy">
-                                                <span class="live__value"> 20:56</span>
+                                                <span class="live__value"></span>
 
                                                 <a href="javascript:void(0)" class="single-item__cover yt-item"
-                                                    data-playlist="Night" data-video-id="byVwnLwdZeE"
-                                                    data-title="RAAG JOG" data-artist="Mahesh Kale"
-                                                    data-img="RAAGAS/Artist-thumb/MaheshKale.webp">
+                                                    data-playlist="Dawn" data-video-id="G7uH8ofoDmg"
+                                                    data-title="RAAG BAIRAGI" data-artist="Himanshu Tambe"
+                                                    data-img="RAAGAS/Artist-thumb/HimanshuTambe.webp">
 
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                         <path
@@ -343,71 +280,10 @@
                                                     </svg>
                                                 </a>
                                             </div>
-                                            <h3 class="live__title">RAAG JOG </h3>
+                                            <h3 class="live__title">RAAG BAIRAGI</h3>
                                         </div>
-                                    </div>
-
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                    <div class="live">
-                                        <div class="album__cover">
-                                            <img src="RAAGAS/Artist-thumb/MaheshKale.webp" alt="MaheshKale"
-                                                loading="lazy">
-                                            <span class="live__value"> 21:04</span>
-
-                                            <a href="javascript:void(0)" class="single-item__cover yt-item"
-                                                data-playlist="Night" data-video-id="N86okK6PzAc"
-                                                data-title="RAAG KALAVATI" data-artist="Mahesh Kale"
-                                                data-img="RAAGAS/Artist-thumb/MaheshKale.webp">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                    <path
-                                                        d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                                </svg>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                    <path
-                                                        d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <h3 class="live__title">RAAG KALAVATI </h3>
-                                    </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!--  end More music  -->
-
-                            <div class="artist_info">
-                                <p class="toggle-text" style="display: none;">
-                                    &emsp; &emsp; &emsp; Mahesh maintains an open outlook towards music to reach out to
-                                    the new generation, while retaining the traditions. He has performed with world
-                                    percussionists including Zakir Hussain, Trilok Gurtu, and Sivamani, and
-                                    instrumentalists like Stanley Jordan, Pedro Eustache, George Brooks and Frank
-                                    Martin, in collaborative works, ably demonstrating his versatility as a composer and
-                                    singer. In an effort to spread awareness and education about Indian classical music
-                                    in the western world, Mahesh has given lecture-­demonstrations and talks at various
-                                    academic institutions including Stanford University, Harvard University, IISc
-                                    Bangalore, TEDx, and the Commonwealth Club.<br>
-                                </p>
-
-                                <p class="toggle-text" style="display: none;">
-                                    &emsp; &emsp; &emsp; Mahesh Kale, is a San Francisco Bay Area-based Indian Classical
-                                    vocalist renowned for his specialization in Indian Classical (Hindustani),
-                                    Semi-Classical, Devotional music, and Natya Sangeet. Kale, after winning India’s
-                                    National Film Award as the Best Playback Singer, for classical piece in the film
-                                    Katyar Kaljat Ghusli (2016), has firmly established himself as the face of Indian
-                                    classical music of the new generation. Honed in the Gurukul system of learning from
-                                    the legendary Pandit Jitendra Abhisheki, he has an illustrious pedigree, and his
-                                    thrilling performances bear this out.
-                                </p>
-
-                                <p class="toggle-text" style="display: none;">
-                                    &emsp; &emsp; &emsp; Founder of Indian Classical Music and Arts Foundation, a
-                                    non-profit organization focused on preserving, nurturing and celebrating Indian
-                                    Classical Music, Mahesh is also a teacher and an inspiration for a motivated student
-                                    body of over a hundred fifty students in the San Francisco Bay Area.
-                                </p>
-
-                                <a class="toggle-text-button">Read More ▼</a>
                             </div>
                         </div>
                         <!-- end article content -->
@@ -438,55 +314,24 @@
     <script src="js/search.js"></script>
     <script src="js/main.js"></script>
     <script>
-        // Add click event dynamically
-        $(document).on("click", ".toggle-text-button", function () {
-
-            // Check if text is more or less
-            if ($(this).text() == "Read More ▼") {
-
-                // Change link text
-                $(this).text("Read Less ▲");
-
-                // Travel up DOM tree to parent, then find any children with CLASS .toggle-text and slide down
-                $(this).parent().children(".toggle-text").slideDown();
-
-            } else {
-
-                // Change link text
-                $(this).text("Read More ▼");
-
-                // Travel up DOM tree to parent, then find any children with CLASS .toggle-text and slide up 
-                $(this).parent().children(".toggle-text").slideUp();
-            }
-        });
-    </script>
-
-    <!-- updated js for video player By Akashkumbhar Jan2026 -->
-    <script>
         const ytPlayer = document.getElementById("ytPlayer");
         const playerTitle = document.getElementById("playerTitle");
         const playerArtist = document.getElementById("playerArtist");
-        const playerCover = document.getElementById("playerCover");
 
         document.querySelectorAll(".yt-item").forEach(item => {
             item.addEventListener("click", () => {
-
-                /* ✅ CHECK STATE FIRST */
                 const isActive = item.classList.contains("active");
                 const isPlaying = item.classList.contains("play");
 
-                /* reset all items */
                 document.querySelectorAll(".yt-item").forEach(el => {
                     el.classList.remove("active", "play", "pause");
                 });
 
-                /* same item clicked again → pause UI only */
                 if (isActive && isPlaying) {
                     item.classList.add("active", "pause");
                     return;
                 }
 
-                /* play state */
                 item.classList.add("active", "play");
 
                 ytPlayer.src =
@@ -501,18 +346,12 @@
             });
         });
 
-        /* ======================
-           PLAYER OPEN / CLOSE
-        ====================== */
-
         const player = document.querySelector(".player");
         const toggleBtn = document.querySelector(".player_openclose_btn");
-
         let isOpen = false;
 
         function openPlayer() {
             if (isOpen) return;
-
             player.classList.add("player--open");
             player.style.height = player.scrollHeight + "px";
             isOpen = true;
@@ -520,21 +359,17 @@
 
         function closePlayer() {
             player.style.height = player.scrollHeight + "px";
-
             requestAnimationFrame(() => {
                 player.style.height = "0px";
             });
-
             player.classList.remove("player--open");
             isOpen = false;
         }
 
-        /* toggle on button click */
         toggleBtn.addEventListener("click", () => {
             isOpen ? closePlayer() : openPlayer();
         });
 
-        /* after open animation → allow auto height */
         player.addEventListener("transitionend", () => {
             if (isOpen) {
                 player.style.height = "auto";
@@ -544,4 +379,3 @@
 </body>
 
 </html>
-

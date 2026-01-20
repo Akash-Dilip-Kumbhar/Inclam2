@@ -23,66 +23,66 @@
 	<!-- Favicons -->
 	<link rel="icon" type="image/png" href="icon/Inclam.png" sizes="64x64">
 	<link rel="apple-touch-icon" href="icon/Inclam.png">
-    <!-- updated CSS for video player By Akashkumbhar Jan2026 -->
-    <style>
-        /* PLAYER */
-        .player {
-            margin: auto;
-            background-color: #16151a;
-            border-radius: 12px;
-            transition: all 0.5s ease;
-            padding: 5px;
-            height: 0;
-        }
+	<!-- updated CSS for video player By Akashkumbhar Jan2026 -->
+	<style>
+		/* PLAYER */
+		.player {
+			margin: auto;
+			background-color: #16151a;
+			border-radius: 12px;
+			transition: all 0.5s ease;
+			padding: 5px;
+			height: 0;
+		}
 
-        #ytPlayer {
-            width: 100%;
-            height: fit-content;
-            /* VIDEO HEIGHT */
-            display: block;
-            border-radius: 12px;
-        }
+		#ytPlayer {
+			width: 100%;
+			height: fit-content;
+			/* VIDEO HEIGHT */
+			display: block;
+			border-radius: 12px;
+		}
 
-        .player_openclose_btn {
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            background-color: #16151a;
-            border-radius: 12px 12px 0 0;
-            height: 40px;
-            width: 90px;
-            color: #fff;
-            font-size: 14px;
-            border: 1px solid #222227;
-            border-bottom: none;
-        }
+		.player_openclose_btn {
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			background-color: #16151a;
+			border-radius: 12px 12px 0 0;
+			height: 40px;
+			width: 90px;
+			color: #fff;
+			font-size: 14px;
+			border: 1px solid #222227;
+			border-bottom: none;
+		}
 
-        .player.player--open {
-            transform: translateY(0);
-            /* JS will control real height */
-            border: 1px solid #25a5699a;
-            padding: 16px;
-            transition: all 0.5s ease;
-            box-shadow: -2px -3px 10px rgba(37, 165, 106, 0.5);
-        }
+		.player.player--open {
+			transform: translateY(0);
+			/* JS will control real height */
+			border: 1px solid #25a5699a;
+			padding: 16px;
+			transition: all 0.5s ease;
+			box-shadow: -2px -3px 10px rgba(37, 165, 106, 0.5);
+		}
 
-        .player.player--open .player_openclose_btn {
-            border: 1px solid #25a5699a;
-            border-bottom: none;
-            box-shadow: -2px -4px 10px rgba(37, 165, 106, 0.5);
-        }
+		.player.player--open .player_openclose_btn {
+			border: 1px solid #25a5699a;
+			border-bottom: none;
+			box-shadow: -2px -4px 10px rgba(37, 165, 106, 0.5);
+		}
 
-        .player_openclose_btn svg {
-            fill: #25a56a;
-            width: 18px;
-            margin-right: 10px;
-        }
-    </style>
+		.player_openclose_btn svg {
+			fill: #25a56a;
+			width: 18px;
+			margin-right: 10px;
+		}
+	</style>
 </head>
 
 <body>
@@ -256,25 +256,25 @@
 		</ul>
 		<!-- end sidebar nav -->
 	</div>
-	<!-- end sidebar -->    <!-- player -->
-    <div class="player">
-        <button class="player_openclose_btn" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                    d="M21.65,2.24a1,1,0,0,0-.8-.23l-13,2A1,1,0,0,0,7,5V15.35A3.45,3.45,0,0,0,5.5,15,3.5,3.5,0,1,0,9,18.5V10.86L20,9.17v4.18A3.45,3.45,0,0,0,18.5,13,3.5,3.5,0,1,0,22,16.5V3A1,1,0,0,0,21.65,2.24Z" />
-            </svg>
-            Player
-        </button>
-        <span class="player__track">
-            <b id="playerTitle">Raagas</b> -
-            <span id="playerArtist">Artist Name</span>
-        </span>
+	<!-- end sidebar --> <!-- player -->
+	<div class="player">
+		<button class="player_openclose_btn" type="button">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path
+					d="M21.65,2.24a1,1,0,0,0-.8-.23l-13,2A1,1,0,0,0,7,5V15.35A3.45,3.45,0,0,0,5.5,15,3.5,3.5,0,1,0,9,18.5V10.86L20,9.17v4.18A3.45,3.45,0,0,0,18.5,13,3.5,3.5,0,1,0,22,16.5V3A1,1,0,0,0,21.65,2.24Z" />
+			</svg>
+			Player
+		</button>
+		<span class="player__track">
+			<b id="playerTitle">Raagas</b> -
+			<span id="playerArtist">Artist Name</span>
+		</span>
 
-        <iframe id="ytPlayer" src="" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
-    <!-- end player -->
+		<iframe id="ytPlayer" src="" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture"
+			allowfullscreen>
+		</iframe>
+	</div>
+	<!-- end player -->
 
 	<!-- main content -->
 	<main class="main">
@@ -304,7 +304,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_AnkitaTambe.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/AnkitaTambe.jpg" alt="AnkitaProfile" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/AnkitaTambe.webp" alt="AnkitaProfile" loading="lazy">
 						</div>
 						<h3 class="artist__title">Ankita Tambe</h3>
 					</a>
@@ -313,7 +313,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_AnuradhaKuber.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/AnuradhaKuber.jpg" alt="AnuradhaProfile" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/AnuradhaKuber.webp" alt="AnuradhaProfile" loading="lazy">
 						</div>
 						<h3 class="artist__title">Anuradha Kuber</h3>
 					</a>
@@ -322,7 +322,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_ArtiKundalkar.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/ArtiKundalkar.jpg" alt="ArtiKundalkar" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/ArtiKundalkar.webp" alt="ArtiKundalkar" loading="lazy">
 						</div>
 						<h3 class="artist__title"> Arti Kundalkar</h3>
 					</a>
@@ -331,7 +331,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_BhagyeshMarathe.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/BhagyeshMarathe.jpg" alt="BhagyeshMarathe" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/BhagyeshMarathe.webp" alt="BhagyeshMarathe" loading="lazy">
 						</div>
 						<h3 class="artist__title">Bhagyesh Marathe</h3>
 					</a>
@@ -340,7 +340,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_ChinmayeeAthale.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/ChinmayeeAthale.jpg" alt="ChinmayeeAthale" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/ChinmayeeAthale.webp" alt="ChinmayeeAthale" loading="lazy">
 						</div>
 						<h3 class="artist__title">Chinmayee Athale</h3>
 					</a>
@@ -349,7 +349,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_HrishikeshBadve.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/HrishikeshBadve.jpg" alt="HrishikeshBadve" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/HrishikeshBadve.webp" alt="HrishikeshBadve" loading="lazy">
 						</div>
 						<h3 class="artist__title">Hrishikesh Badve</h3>
 					</a>
@@ -358,7 +358,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_JayateerthMevundi.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/JayateerthMevundi.jpg" alt="JayateerthMevundi"
+							<img src="RAAGAS/Artist-thumb/JayateerthMevundi.webp" alt="JayateerthMevundi"
 								loading="lazy">
 						</div>
 						<h3 class="artist__title">Jayateerth Mevundi</h3>
@@ -368,7 +368,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_KeyurKurulkar.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/KeyurKurulkar.jpg" alt="KeyurKurulkar" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/KeyurKurulkar.webp" alt="KeyurKurulkar" loading="lazy">
 						</div>
 						<h3 class="artist__title">Keyur Kurulkar</h3>
 					</a>
@@ -377,7 +377,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_KomalSane.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/KomalSane.jpg" alt="KomalSane loading=" lazy">
+							<img src="RAAGAS/Artist-thumb/KomalSane.webp" alt="KomalSane loading=" lazy">
 						</div>
 						<h3 class="artist__title">Komal Sane</h3>
 					</a>
@@ -386,7 +386,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_MaheshKale.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/MaheshKale.jpg" alt="MaheshKale" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/MaheshKale.webp" alt="MaheshKale" loading="lazy">
 						</div>
 						<h3 class="artist__title">Mahesh Kale</h3>
 					</a>
@@ -395,7 +395,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_MeghanaKhandkar.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/MeghanaKhandkar.jpg" alt="MeghanaKhandkar" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/MeghanaKhandkar.webp" alt="MeghanaKhandkar" loading="lazy">
 						</div>
 						<h3 class="artist__title">Meghana Khandkar</h3>
 					</a>
@@ -404,7 +404,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_MrunmayeePhatak.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/MrunmayeePhatak.jpg" alt="MrunmayeePhatak" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/MrunmayeePhatak.webp" alt="MrunmayeePhatak" loading="lazy">
 						</div>
 						<h3 class="artist__title">Mrunmayee Phatak</h3>
 					</a>
@@ -413,7 +413,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_MukulKulkarni.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/MukulKulkarni.jpg" alt="MukulKulkarni" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/MukulKulkarni.webp" alt="MukulKulkarni" loading="lazy">
 						</div>
 						<h3 class="artist__title">Mukul Kulkarni</h3>
 					</a>
@@ -422,7 +422,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_NageshAdgaonkar.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/NageshAdgaonkar.jpg" alt="NageshAdgaonkar" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/NageshAdgaonkar.webp" alt="NageshAdgaonkar" loading="lazy">
 						</div>
 						<h3 class="artist__title">Nagesh Adgaonkar</h3>
 					</a>
@@ -431,7 +431,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_PriyalSathe.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/PriyalSathe.jpg" alt="PriyalSathe" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/PriyalSathe.webp" alt="PriyalSathe" loading="lazy">
 						</div>
 						<h3 class="artist__title">Priyal Sathe</h3>
 					</a>
@@ -440,7 +440,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_RaghunandanPanshikar.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/RaghunandanPanshikar.jpg" alt="RaghunandanPanshikar"
+							<img src="RAAGAS/Artist-thumb/RaghunandanPanshikar.webp" alt="RaghunandanPanshikar"
 								loading="lazy">
 						</div>
 						<h3 class="artist__title">Raghunandan Panshikar</h3>
@@ -450,7 +450,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_RevatiKamat.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/RevatiKamat.jpg" alt="RevatiKamat" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/RevatiKamat.webp" alt="RevatiKamat" loading="lazy">
 						</div>
 						<h3 class="artist__title">Revati Kamat</h3>
 					</a>
@@ -459,7 +459,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_SaurabhKadgaonkar.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/SaurabhKadgaonkar.jpg" alt="SaurabhKadgaonkar"
+							<img src="RAAGAS/Artist-thumb/SaurabhKadgaonkar.webp" alt="SaurabhKadgaonkar"
 								loading="lazy">
 						</div>
 						<h3 class="artist__title">Saurabh Kadgaonkar</h3>
@@ -469,7 +469,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_ShounakAbhisheki.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/ShounakAbhisheki.jpg" alt="ShounakAbhisheki" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/ShounakAbhisheki.webp" alt="ShounakAbhisheki" loading="lazy">
 						</div>
 						<h3 class="artist__title">Shounak Abhisheki</h3>
 					</a>
@@ -478,7 +478,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_ShrutiDeshpande.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/ShrutiDeshpande.jpg" alt="ShrutiDeshpande" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/ShrutiDeshpande.webp" alt="ShrutiDeshpande" loading="lazy">
 						</div>
 						<h3 class="artist__title">Shruti Deshpande</h3>
 					</a>
@@ -487,7 +487,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_ShrutiVishwakarma.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/ShrutiVishwakarma.jpg" alt="ShrutiVishwakarma"
+							<img src="RAAGAS/Artist-thumb/ShrutiVishwakarma.webp" alt="ShrutiVishwakarma"
 								loading="lazy">
 						</div>
 						<h3 class="artist__title">Shruti Vishwakarma</h3>
@@ -497,7 +497,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_SuranjanKhandalkar.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/SuranjanKhandalkar.jpg" alt="SuranjanKhandalkar"
+							<img src="RAAGAS/Artist-thumb/SuranjanKhandalkar.webp" alt="SuranjanKhandalkar"
 								loading="lazy">
 						</div>
 						<h3 class="artist__title">Suranjan Khandalkar</h3>
@@ -507,7 +507,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_VinayRamadasan.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/VinayRamadasan.jpg" alt="VinayRamadasan" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/VinayRamadasan.webp" alt="VinayRamadasan" loading="lazy">
 						</div>
 						<h3 class="artist__title">Vinay Ramadasan</h3>
 					</a>
@@ -516,7 +516,7 @@
 				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
 					<a href="Artist_VishalMoghe.html" class="artist">
 						<div class="artist__cover">
-							<img src="RAAGAS/Artist-thumb/VishalMoghe.jpg" alt="VishalMoghe" loading="lazy">
+							<img src="RAAGAS/Artist-thumb/VishalMoghe.webp" alt="VishalMoghe" loading="lazy">
 						</div>
 						<h3 class="artist__title">Vishal Moghe</h3>
 					</a>
@@ -579,88 +579,86 @@
 	<script src="js/plyr.min.js"></script>
 	<script src="js/search.js"></script>
 	<script src="js/main.js"></script>
-    <!-- updated js for video player By Akashkumbhar Jan2026 -->
-    <script>
-        const ytPlayer = document.getElementById("ytPlayer");
-        const playerTitle = document.getElementById("playerTitle");
-        const playerArtist = document.getElementById("playerArtist");
-        const playerCover = document.getElementById("playerCover");
+	<!-- updated js for video player By Akashkumbhar Jan2026 -->
+	<script>
+		const ytPlayer = document.getElementById("ytPlayer");
+		const playerTitle = document.getElementById("playerTitle");
+		const playerArtist = document.getElementById("playerArtist");
+		const playerCover = document.getElementById("playerCover");
 
-        document.querySelectorAll(".yt-item").forEach(item => {
-            item.addEventListener("click", () => {
+		document.querySelectorAll(".yt-item").forEach(item => {
+			item.addEventListener("click", () => {
 
-                /* âœ… CHECK STATE FIRST */
-                const isActive = item.classList.contains("active");
-                const isPlaying = item.classList.contains("play");
+				/* âœ… CHECK STATE FIRST */
+				const isActive = item.classList.contains("active");
+				const isPlaying = item.classList.contains("play");
 
-                /* reset all items */
-                document.querySelectorAll(".yt-item").forEach(el => {
-                    el.classList.remove("active", "play", "pause");
-                });
+				/* reset all items */
+				document.querySelectorAll(".yt-item").forEach(el => {
+					el.classList.remove("active", "play", "pause");
+				});
 
-                /* same item clicked again â†’ pause UI only */
-                if (isActive && isPlaying) {
-                    item.classList.add("active", "pause");
-                    return;
-                }
+				/* same item clicked again â†’ pause UI only */
+				if (isActive && isPlaying) {
+					item.classList.add("active", "pause");
+					return;
+				}
 
-                /* play state */
-                item.classList.add("active", "play");
+				/* play state */
+				item.classList.add("active", "play");
 
-                ytPlayer.src =
-                    "https://www.youtube.com/embed/" +
-                    item.dataset.videoId +
-                    "?autoplay=1&rel=0";
+				ytPlayer.src =
+					"https://www.youtube.com/embed/" +
+					item.dataset.videoId +
+					"?autoplay=1&rel=0";
 
-                playerTitle.textContent = item.dataset.title;
-                playerArtist.textContent = item.dataset.artist;
+				playerTitle.textContent = item.dataset.title;
+				playerArtist.textContent = item.dataset.artist;
 
-                openPlayer();
-            });
-        });
+				openPlayer();
+			});
+		});
 
-        /* ======================
-           PLAYER OPEN / CLOSE
-        ====================== */
+		/* ======================
+		   PLAYER OPEN / CLOSE
+		====================== */
 
-        const player = document.querySelector(".player");
-        const toggleBtn = document.querySelector(".player_openclose_btn");
+		const player = document.querySelector(".player");
+		const toggleBtn = document.querySelector(".player_openclose_btn");
 
-        let isOpen = false;
+		let isOpen = false;
 
-        function openPlayer() {
-            if (isOpen) return;
+		function openPlayer() {
+			if (isOpen) return;
 
-            player.classList.add("player--open");
-            player.style.height = player.scrollHeight + "px";
-            isOpen = true;
-        }
+			player.classList.add("player--open");
+			player.style.height = player.scrollHeight + "px";
+			isOpen = true;
+		}
 
-        function closePlayer() {
-            player.style.height = player.scrollHeight + "px";
+		function closePlayer() {
+			player.style.height = player.scrollHeight + "px";
 
-            requestAnimationFrame(() => {
-                player.style.height = "0px";
-            });
+			requestAnimationFrame(() => {
+				player.style.height = "0px";
+			});
 
-            player.classList.remove("player--open");
-            isOpen = false;
-        }
+			player.classList.remove("player--open");
+			isOpen = false;
+		}
 
-        /* toggle on button click */
-        toggleBtn.addEventListener("click", () => {
-            isOpen ? closePlayer() : openPlayer();
-        });
+		/* toggle on button click */
+		toggleBtn.addEventListener("click", () => {
+			isOpen ? closePlayer() : openPlayer();
+		});
 
-        /* after open animation â†’ allow auto height */
-        player.addEventListener("transitionend", () => {
-            if (isOpen) {
-                player.style.height = "auto";
-            }
-        });
-    </script>
+		/* after open animation â†’ allow auto height */
+		player.addEventListener("transitionend", () => {
+			if (isOpen) {
+				player.style.height = "auto";
+			}
+		});
+	</script>
 </body>
 
 </html>
-
-
