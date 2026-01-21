@@ -23,66 +23,66 @@
 	<!-- Favicons -->
 	<link rel="icon" type="image/png" href="icon/Inclam.png" sizes="64x64">
 	<link rel="apple-touch-icon" href="icon/Inclam.png">
-    <!-- updated CSS for video player By Akashkumbhar Jan2026 -->
-    <style>
-        /* PLAYER */
-        .player {
-            margin: auto;
-            background-color: #16151a;
-            border-radius: 12px;
-            transition: all 0.5s ease;
-            padding: 5px;
-            height: 0;
-        }
+	<!-- updated CSS for video player By Akashkumbhar Jan2026 -->
+	<style>
+		/* PLAYER */
+		.player {
+			margin: auto;
+			background-color: #16151a;
+			border-radius: 12px;
+			transition: all 0.5s ease;
+			padding: 5px;
+			height: 0;
+		}
 
-        #ytPlayer {
-            width: 100%;
-            height: fit-content;
-            /* VIDEO HEIGHT */
-            display: block;
-            border-radius: 12px;
-        }
+		#ytPlayer {
+			width: 100%;
+			height: fit-content;
+			/* VIDEO HEIGHT */
+			display: block;
+			border-radius: 12px;
+		}
 
-        .player_openclose_btn {
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            background-color: #16151a;
-            border-radius: 12px 12px 0 0;
-            height: 40px;
-            width: 90px;
-            color: #fff;
-            font-size: 14px;
-            border: 1px solid #222227;
-            border-bottom: none;
-        }
+		.player_openclose_btn {
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			background-color: #16151a;
+			border-radius: 12px 12px 0 0;
+			height: 40px;
+			width: 90px;
+			color: #fff;
+			font-size: 14px;
+			border: 1px solid #222227;
+			border-bottom: none;
+		}
 
-        .player.player--open {
-            transform: translateY(0);
-            /* JS will control real height */
-            border: 1px solid #25a5699a;
-            padding: 16px;
-            transition: all 0.5s ease;
-            box-shadow: -2px -3px 10px rgba(37, 165, 106, 0.5);
-        }
+		.player.player--open {
+			transform: translateY(0);
+			/* JS will control real height */
+			border: 1px solid #25a5699a;
+			padding: 16px;
+			transition: all 0.5s ease;
+			box-shadow: -2px -3px 10px rgba(37, 165, 106, 0.5);
+		}
 
-        .player.player--open .player_openclose_btn {
-            border: 1px solid #25a5699a;
-            border-bottom: none;
-            box-shadow: -2px -4px 10px rgba(37, 165, 106, 0.5);
-        }
+		.player.player--open .player_openclose_btn {
+			border: 1px solid #25a5699a;
+			border-bottom: none;
+			box-shadow: -2px -4px 10px rgba(37, 165, 106, 0.5);
+		}
 
-        .player_openclose_btn svg {
-            fill: #25a56a;
-            width: 18px;
-            margin-right: 10px;
-        }
-    </style>
+		.player_openclose_btn svg {
+			fill: #25a56a;
+			width: 18px;
+			margin-right: 10px;
+		}
+	</style>
 </head>
 
 <body>
@@ -256,25 +256,25 @@
 		</ul>
 		<!-- end sidebar nav -->
 	</div>
-	<!-- end sidebar -->    <!-- player -->
-    <div class="player">
-        <button class="player_openclose_btn" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                    d="M21.65,2.24a1,1,0,0,0-.8-.23l-13,2A1,1,0,0,0,7,5V15.35A3.45,3.45,0,0,0,5.5,15,3.5,3.5,0,1,0,9,18.5V10.86L20,9.17v4.18A3.45,3.45,0,0,0,18.5,13,3.5,3.5,0,1,0,22,16.5V3A1,1,0,0,0,21.65,2.24Z" />
-            </svg>
-            Player
-        </button>
-        <span class="player__track">
-            <b id="playerTitle">Raagas</b> -
-            <span id="playerArtist">Artist Name</span>
-        </span>
+	<!-- end sidebar --> <!-- player -->
+	<div class="player">
+		<button class="player_openclose_btn" type="button">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path
+					d="M21.65,2.24a1,1,0,0,0-.8-.23l-13,2A1,1,0,0,0,7,5V15.35A3.45,3.45,0,0,0,5.5,15,3.5,3.5,0,1,0,9,18.5V10.86L20,9.17v4.18A3.45,3.45,0,0,0,18.5,13,3.5,3.5,0,1,0,22,16.5V3A1,1,0,0,0,21.65,2.24Z" />
+			</svg>
+			Player
+		</button>
+		<span class="player__track">
+			<b id="playerTitle">Raagas</b> -
+			<span id="playerArtist">Artist Name</span>
+		</span>
 
-        <iframe id="ytPlayer" src="" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
-    <!-- end player -->
+		<iframe id="ytPlayer" src="" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture"
+			allowfullscreen>
+		</iframe>
+	</div>
+	<!-- end player -->
 
 	<!-- main content -->
 	<main class="main">
@@ -303,11 +303,10 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/VinayRamadasan.webp" alt="VinayRamadasan" loading="lazy">
-							<a data-playlist data-title="RAAG DARBARI" data-artist="Vinay Ramadasan"
-								data-img="RAAGAS/Artist-thumb/VinayRamadasan.webp"
-								href="RAAGAS/All Raga/47 RAAG DARBARI by VINAY RAMADASAN.mp3"
-								class="single-item__cover">
+							<img src="RAAGAS/Artist-thumb/HimanshuTambe.webp" alt="Himanshu Tambe" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Dawn"
+								data-video-id="G7uH8ofoDmg" data-title="RAAG BAIRAGI" data-artist="Himanshu Tambe"
+								data-img="RAAGAS/Artist-thumb/HimanshuTambe.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
@@ -319,8 +318,8 @@
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG DARBARI</h3>
-							<span><a href="Artist_VinayRamadasan.html">Vinay Ramadasan</a></span>
+							<h3>RAAG BAIRAGI</h3>
+							<span><a href="Artist_HimanshuTambe.html">Himanshu Tambe</a></span>
 						</div>
 					</div>
 				</div>
@@ -328,11 +327,10 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/ArtiKundalkar.webp" alt="ArtiKundalkar" loading="lazy">
-							<a data-playlist data-title="RAAG VACHASPATI" data-artist="Arti Kundalkar"
-								data-img="RAAGAS/Artist-thumb/ArtiKundalkar.webp"
-								href="RAAGAS/All Raga/34 RAAG VACHASPATI by ARTI KUNDALKAR.mp3"
-								class="single-item__cover">
+							<img src="RAAGAS/Artist-thumb/RamDeshpande.webp" alt="Ram Deshpande" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Dawn"
+								data-video-id="JzeiiuAZPNU" data-title="RAAG KAPAR GAURI BHAIRAV"
+								data-artist="Ram Deshpande" data-img="RAAGAS/Artist-thumb/RamDeshpande.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
@@ -344,8 +342,8 @@
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG VACHASPATI</h3>
-							<span><a href="Artist_ArtiKundalkar.html">Arti Kundalkar</a></span>
+							<h3>RAAG KAPAR GAURI BHAIRAV</h3>
+							<span><a href="Artist_RamDeshpande.html">Ram Deshpande</a></span>
 						</div>
 					</div>
 				</div>
@@ -353,135 +351,11 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/ShounakAbhisheki.webp" alt="ShounakAbhisheki" loading="lazy">
-							<a data-playlist data-title="RAAG JOGKAUNS" data-artist="Shounak Abhisheki"
-								data-img="RAAGAS/Artist-thumb/ShounakAbhisheki.webp"
-								href="RAAGAS/All Raga/44 RAAG JOGKAUNS by SHOUNAK ABHISHEKI.mp3"
-								class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3> RAAG JOGKAUNS</h3>
-							<span><a href="Artist_ShounakAbhisheki.html">Shounak Abhisheki</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/RevatiKamat.webp" alt="Revati Kamat" loading="lazy">
-							<a data-playlist data-title="RAAG NANDA" data-artist="Revati Kamat"
-								data-img="RAAGAS/Artist-thumb/RevatiKamat.webp"
-								href="RAAGAS/All Raga/29 RAAG NANDA by REVATI KAMAT.mp3" class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG NANDA</h3>
-							<span><a href="Artist_RevatiKamat.html">Revati Kamat</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/VishalMoghe.webp" alt="VishalMoghe" loading="lazy">
-							<a data-playlist data-title="RAAG JAYJAYWANTI" data-artist="Vishal Moghe"
-								data-img="RAAGAS/Artist-thumb/VishalMoghe.webp"
-								href="RAAGAS/All Raga/30 RAAG JAYJAYWANTI by VISHAL MOGHE.mp3"
-								class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG JAYJAYWANTI</h3>
-							<span><a href="Artist_VishalMoghe.html">Vishal Moghe</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/KeyurKurulkar.webp" alt="KeyurKurulkar" loading="lazy">
-							<a data-playlist data-title="RAAG CHHAYANAT" data-artist="Keyur Kurulkar"
-								data-img="RAAGAS/Artist-thumb/KeyurKurulkar.webp"
-								href="RAAGAS/All Raga/27 RAAG CHHAYANAT by KEYUR KURULKAR.mp3"
-								class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG CHHAYANAT</h3>
-							<span><a href="Artist_KeyurKurulkar.html">Keyur Kurulkar</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/AnuradhaKuber.webp" alt="AnuradhaKuber" loading="lazy">
-							<a data-playlist data-title="RAAG KAMOD" data-img="RAAGAS/Artist-thumb/AnuradhaKuber.webp"
-								data-artist="Anuradha Kuber" href="RAAGAS/All Raga/28 RAAG KAMOD by ANURADHA KUBER.mp3"
-								class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG KAMOD</h3>
-							<span><a href="Artist_AnuradhaKuber.html">Anuradha Kuber</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/SuranjanKhandalkar.webp" alt="SuranjanKhandalkar"
+							<img src="RAAGAS/Artist-thumb/ShrutiVishwakarma.webp" alt="Shruti Vishwakarma"
 								loading="lazy">
-							<a data-playlist data-title="RAAG CHARUKESHI" data-artist="Suranjan Khandalkar"
-								data-img="RAAGAS/Artist-thumb/SuranjanKhandalkar.webp"
-								href="RAAGAS/All Raga/10 RAAG CHARUKESHI by SURANJAN KHANDALKAR.mp3"
-								class="single-item__cover">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Morning-Noon"
+								data-video-id="jBMwdQrGeXs" data-title="RAAG BILASKHANI TODI"
+								data-artist="Shruti Vishwakarma" data-img="RAAGAS/Artist-thumb/ShrutiVishwakarma.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
@@ -493,8 +367,8 @@
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG CHARUKESHI</h3>
-							<span><a href="Artist_SuranjanKhandalkar.html">Suranjan Khandalkar</a></span>
+							<h3>RAAG BILASKHANI TODI</h3>
+							<span><a href="Artist_ShrutiVishwakarma.html">Shruti Vishwakarma</a></span>
 						</div>
 					</div>
 				</div>
@@ -502,11 +376,10 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/ShrutiDeshpande.webp" alt="ShrutiDeshpande" loading="lazy">
-							<a data-playlist data-title="RAAG MULTANI" data-artist="Shruti Deshpande"
-								data-img="RAAGAS/Artist-thumb/ShrutiDeshpande.webp"
-								href="RAAGAS/All Raga/15 RAAG MULTANI by SHRUTI DESHPANDE.mp3"
-								class="single-item__cover">
+							<img src="RAAGAS/Artist-thumb/JayantKaijkar.webp" alt="Jayant Kaijkar" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Morning-Noon"
+								data-video-id="aSASVohL6RY" data-title="RAAG GUJARI TODI" data-artist="Jayant Kaijkar"
+								data-img="RAAGAS/Artist-thumb/JayantKaijkar.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
@@ -518,160 +391,8 @@
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG MULTANI</h3>
-							<span><a href="Artist_ShrutiDeshpande.html">Shruti Deshpande</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="img/artists/NAGESH ADGAONKAR/Nagesh_Adgaonkar.jpg" alt="Nagesh_Adgaonkar"
-								loading="lazy">
-							<a data-playlist data-title="RAAG SHREE" data-artist="Nagesh Adgaonkar"
-								data-img="img/artists/NAGESH ADGAONKAR/Nagesh_Adgaonkar.jpg"
-								href="RAAGAS/All Raga/20 RAAG SHREE by NAGESH ADGAONKAR.mp3" class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG SHREE</h3>
-							<span><a href="Artist_NageshAdgaonkar.html">Nagesh Adgaonkar</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/JayateerthMevundi.webp" alt="JayateerthMevundi"
-								loading="lazy">
-							<a data-playlist data-title="RAAG PURIYA" data-artist="Jayateerth Mevundi"
-								data-img="RAAGAS/Artist-thumb/JayateerthMevundi.webp"
-								href="RAAGAS/All Raga/23 RAAG PURIYA by JAYATEERTH MEVUNDI.mp3"
-								class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG PURIYA</h3>
-							<span><a href="Artist_JayateerthMevundi.html">Jayateerth Mevundi</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/PriyalSathe.webp" alt="Priyal Sathe" loading="lazy">
-							<a data-playlist data-title="RAAG JAUNPURI" data-artist="Priyal Sathe"
-								data-img="RAAGAS/Artist-thumb/PriyalSathe.webp"
-								href="RAAGAS/All Raga/11 RAAG JAUNPURI by PRIYAL SATHE.mp3" class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG JAUNPURI</h3>
-							<span><a href="Artist_PriyalSathe.html">Priyal Sathe</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/RaghunandanPanshikar.webp" alt="RaghunandanPanshikar"
-								loading="lazy">
-							<a data-playlist data-title="RAAG TODI" data-artist="Raghunandan Panshikar"
-								data-img="RAAGAS/Artist-thumb/RaghunandanPanshikar.webp"
-								href="RAAGAS/All Raga/06 RAAG TODI by RAGHUNANDAN PANSHIKAR.mp3"
-								class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG TODI</h3>
-							<span><a href="Artist_RaghunandanPanshikar.html">Raghunandan Panshikar</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/RevatiKamat.webp" alt="Revati Kamat" loading="lazy">
-							<a data-playlist data-title="RAAG NATABHAIRAV" data-artist="Revati Kamat"
-								data-img="RAAGAS/Artist-thumb/RevatiKamat.webp"
-								href="RAAGAS/All Raga/08 RAAG NATABHAIRAV by REVATI KAMAT.mp3"
-								class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG NATABHAIRAV</h3>
-							<span><a href="Artist_RevatiKamat.html">Revati Kamat</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/JayateerthMevundi.webp" alt="JayateerthMevundi"
-								loading="lazy">
-							<a data-playlist data-title="RAAG RAMKALI" data-artist="Jayateerth Mevundi"
-								data-img="RAAGAS/Artist-thumb/JayateerthMevundi.webp"
-								href="RAAGAS/All Raga/05 RAAG RAMKALI by JAYATEERTH MEVUNDI.mp3"
-								class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG RAMKALI</h3>
-							<span><a href="Artist_JayateerthMevundi.html">Jayateerth Mevundi</a></span>
+							<h3>RAAG GUJARI TODI</h3>
+							<span><a href="Artist_JayantKaijkar.html">Jayant Kaijkar</a></span>
 						</div>
 					</div>
 				</div>
@@ -680,17 +401,16 @@
 					<div class="album">
 						<div class="album__cover">
 							<img src="RAAGAS/Artist-thumb/ShounakAbhisheki.webp" alt="Shounak Abhisheki" loading="lazy">
-							<a data-playlist data-title="RAAG SAALAG VARHALI" data-artist="Shounak Abhisheki"
-								data-img="RAAGAS/Artist-thumb/ShounakAbhisheki.webp"
-								href="RAAGAS/All Raga/07 RAAG SAALAG VARHALI by SHOUNAK ABHISHEKI.mp3"
-								class="single-item__cover">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Morning-Noon"
+								data-video-id="Lk_krt3J79M" data-title="RAAG SAALAG VARHALI"
+								data-artist="Shounak Abhisheki" data-img="RAAGAS/Artist-thumb/ShounakAbhisheki.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
 								</svg>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
 								</svg>
 							</a>
 						</div>
@@ -704,24 +424,23 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/VishalMoghe.webp" alt="Vishal Moghe" loading="lazy">
-							<a data-playlist data-title="RAAG DHANASHREE" data-artist="Vishal Moghe"
-								data-img="RAAGAS/Artist-thumb/VishalMoghe.webp"
-								href="RAAGAS/All Raga/18 RAAG DHANASHREE by VISHAL MOGHE.mp3"
-								class="single-item__cover">
+							<img src="RAAGAS/Artist-thumb/BhagyeshMarathe.webp" alt="Bhagyesh Marathe" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Morning-Noon"
+								data-video-id="H55fdTF8oiU" data-title="RAAG KOMAL RISHABH ASAWARI"
+								data-artist="Bhagyesh Marathe" data-img="RAAGAS/Artist-thumb/BhagyeshMarathe.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
 								</svg>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
 								</svg>
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG DHANASHREE</h3>
-							<span><a href="Artist_VishalMoghe.html">Vishal Moghe</a></span>
+							<h3>RAAG KOMAL RISHABH ASAWARI</h3>
+							<span><a href="Artist_BhagyeshMarathe.html">Bhagyesh Marathe</a></span>
 						</div>
 					</div>
 				</div>
@@ -729,24 +448,23 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/ArtiKundalkar.webp" alt="Arti Kundalkar" loading="lazy">
-							<a data-playlist data-title="RAAG MADHUVANTI" data-artist="Arti Kundalkar"
-								data-img="RAAGAS/Artist-thumb/ArtiKundalkar.webp"
-								href="RAAGAS/All Raga/16 RAAG MADHUVANTI by ARTI KUNDALKAR.mp3"
-								class="single-item__cover">
+							<img src="RAAGAS/Artist-thumb/MandarGadgil.webp" alt="Mandar Gadgil" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Morning-Noon"
+								data-video-id="58mk3HQnLFY" data-title="RAAG BASANT MUKHARI" data-artist="Mandar Gadgil"
+								data-img="RAAGAS/Artist-thumb/MandarGadgil.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
 								</svg>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
 								</svg>
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG MADHUVANTI</h3>
-							<span><a href="Artist_ArtiKundalkar.html">Arti Kundalkar</a></span>
+							<h3>RAAG BASANT MUKHARI</h3>
+							<span><a href="Artist_MandarGadgil.html">Mandar Gadgil</a></span>
 						</div>
 					</div>
 				</div>
@@ -755,22 +473,21 @@
 					<div class="album">
 						<div class="album__cover">
 							<img src="RAAGAS/Artist-thumb/VinayRamadasan.webp" alt="Vinay Ramadasan" loading="lazy">
-							<a data-playlist data-title="RAAG SHUDDHA SARANGA" data-artist="Vinay Ramadasan"
-								data-img="RAAGAS/Artist-thumb/VinayRamadasan.webp"
-								href="RAAGAS/All Raga/13 RAAG SHUDDHA SARANGA by VINAY RAMADASAN.mp3"
-								class="single-item__cover">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Afternoon"
+								data-video-id="K3f2EPLW7b0" data-title="RAAG SARANG" data-artist="Vinay Ramadasan"
+								data-img="RAAGAS/Artist-thumb/VinayRamadasan.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
 								</svg>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
 								</svg>
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG SHUDDHA SARANGA</h3>
+							<h3>RAAG SARANG</h3>
 							<span><a href="Artist_VinayRamadasan.html">Vinay Ramadasan</a></span>
 						</div>
 					</div>
@@ -779,24 +496,23 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/PriyalSathe.webp" alt="PriyalSathe" loading="lazy">
-							<a data-playlist data-title="RAAG LALITA GAURI" data-artist="Priyal Sathe"
-								data-img="RAAGAS/Artist-thumb/PriyalSathe.webp"
-								href="RAAGAS/All Raga/19 RAAG LALITA GAURI by PRIYAL SATHE.mp3"
-								class="single-item__cover">
+							<img src="RAAGAS/Artist-thumb/JayantKaijkar.webp" alt="Jayant Kaijkar" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Afternoon"
+								data-video-id="3UVjKCd0Wx8" data-title="RAAG LANKA DAHAN SARANG"
+								data-artist="Jayant Kaijkar" data-img="RAAGAS/Artist-thumb/JayantKaijkar.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
 								</svg>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
 								</svg>
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG LALITA GAURI</h3>
-							<span><a href="Artist_PriyalSathe.html">Priyal Sathe</a></span>
+							<h3>RAAG LANKA DAHAN SARANG</h3>
+							<span><a href="Artist_JayantKaijkar.html">Jayant Kaijkar</a></span>
 						</div>
 					</div>
 				</div>
@@ -804,23 +520,24 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/NageshAdgaonkar.webp" alt="Nagesh Adgaonkar" loading="lazy">
-							<a data-playlist data-title="RAAG MARWA" data-artist="Nagesh Adgaonkar"
-								data-img="RAAGAS/Artist-thumb/NageshAdgaonkar.webp"
-								href="RAAGAS/All Raga/22 RAAG MARWA by NAGESH ADGAONKAR.mp3" class="single-item__cover">
+							<img src="RAAGAS/Artist-thumb/ShrutiVishwakarma.webp" alt="Shruti Vishwakarma"
+								loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Evening"
+								data-video-id="i7AGSmbkB0c" data-title="RAAG PURVI" data-artist="Shruti Vishwakarma"
+								data-img="RAAGAS/Artist-thumb/ShrutiVishwakarma.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
 								</svg>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
 								</svg>
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG MARWA</h3>
-							<span><a href="Artist_NageshAdgaonkar.html">Nagesh Adgaonkar</a></span>
+							<h3>RAAG PURVI</h3>
+							<span><a href="Artist_ShrutiVishwakarma.html">Shruti Vishwakarma</a></span>
 						</div>
 					</div>
 				</div>
@@ -828,11 +545,34 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/ShrutiDeshpande.webp" alt="Shruti Deshpande" loading="lazy">
-							<a data-playlist data-title="RAAG NAYAKI KANADA" data-artist="Shruti Deshpande"
-								data-img="RAAGAS/Artist-thumb/ShrutiDeshpande.webp"
-								href="RAAGAS/All Raga/46 RAAG NAYAKI KANADA by SHRUTI DESHPANDE.mp3"
-								class="single-item__cover">
+							<img src="RAAGAS/Artist-thumb/GandharDeshpande.webp" alt="Gandhar Deshpande" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Late Evening"
+								data-video-id="9VNy5RdGxOE" data-title="RAAG SAWANI KALYAN"
+								data-artist="Gandhar Deshpande" data-img="RAAGAS/Artist-thumb/GandharDeshpande.webp">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path
+										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path
+										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+								</svg>
+							</a>
+						</div>
+						<div class="album__title">
+							<h3>RAAG SAWANI KALYAN</h3>
+							<span><a href="Artist_GandharDeshpande.html">Gandhar Deshpande</a></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6 col-sm-4 col-lg-2">
+					<div class="album">
+						<div class="album__cover">
+							<img src="RAAGAS/Artist-thumb/BhagyeshMarathe.webp" alt="Bhagyesh Marathe" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Late Evening"
+								data-video-id="iLwAXQwBPYI" data-title="RAAG BIHAG" data-artist="Bhagyesh Marathe"
+								data-img="RAAGAS/Artist-thumb/BhagyeshMarathe.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
@@ -844,8 +584,32 @@
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG NAYAKI KANADA</h3>
-							<span><a href="Artist_ShrutiDeshpande.html">Shruti Deshpande</a></span>
+							<h3>RAAG BIHAG</h3>
+							<span><a href="Artist_BhagyeshMarathe.html">Bhagyesh Marathe</a></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6 col-sm-4 col-lg-2">
+					<div class="album">
+						<div class="album__cover">
+							<img src="RAAGAS/Artist-thumb/RamDeshpande.webp" alt="Ram Deshpande" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Night"
+								data-video-id="kpogHgOBi6A" data-title="RAAG MALUHA KEDAR" data-artist="Ram Deshpande"
+								data-img="RAAGAS/Artist-thumb/RamDeshpande.webp">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path
+										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path
+										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+								</svg>
+							</a>
+						</div>
+						<div class="album__title">
+							<h3>RAAG MALUHA KEDAR</h3>
+							<span><a href="Artist_RamDeshpande.html">Ram Deshpande</a></span>
 						</div>
 					</div>
 				</div>
@@ -854,10 +618,9 @@
 					<div class="album">
 						<div class="album__cover">
 							<img src="RAAGAS/Artist-thumb/AnuradhaKuber.webp" alt="Anuradha Kuber" loading="lazy">
-							<a data-playlist data-title="RAAG GORAKH KALYAN" data-artist="Anuradha Kuber"
-								data-img="RAAGAS/Artist-thumb/AnuradhaKuber.webp"
-								href="RAAGAS/All Raga/36 RAAG GORAKH KALYAN by ANURADHA KUBER.mp3"
-								class="single-item__cover">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Night"
+								data-video-id="R_eqAWOMvW8" data-title="RAAG HEM" data-artist="Anuradha Kuber"
+								data-img="RAAGAS/Artist-thumb/AnuradhaKuber.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
@@ -869,7 +632,7 @@
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG GORAKH KALYAN</h3>
+							<h3>RAAG HEM</h3>
 							<span><a href="Artist_AnuradhaKuber.html">Anuradha Kuber</a></span>
 						</div>
 					</div>
@@ -878,24 +641,23 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/KeyurKurulkar.webp" alt="Keyur Kurulkar" loading="lazy">
-							<a data-playlist data-title="RAAG ALHAIYA BILAWAL" data-artist="Keyur Kurulkar"
-								data-img="RAAGAS/Artist-thumb/KeyurKurulkar.webp"
-								href="RAAGAS/All Raga/09 RAAG ALHAIYA BILAWAL by KEYUR KURULKAR.mp3"
-								class="single-item__cover">
+							<img src="RAAGAS/Artist-thumb/GandharDeshpande.webp" alt="Gandhar Deshpande" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Midnight"
+								data-video-id="JgCYGv23skA" data-title="RAAG KOUSI KANADA"
+								data-artist="Gandhar Deshpande" data-img="RAAGAS/Artist-thumb/GandharDeshpande.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
 								</svg>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
 								</svg>
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG ALHAIYA BILAWAL</h3>
-							<span><a href="Artist_KeyurKurulkar.html">Keyur Kurulkar</a></span>
+							<h3>RAAG KOUSI KANADA</h3>
+							<span><a href="Artist_GandharDeshpande.html">Gandhar Deshpande</a></span>
 						</div>
 					</div>
 				</div>
@@ -903,51 +665,23 @@
 				<div class="col-6 col-sm-4 col-lg-2">
 					<div class="album">
 						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/SuranjanKhandalkar.webp" alt="Suranjan Khandalkar"
-								loading="lazy">
-							<a data-playlist data-title="RAAG PURIYA DHANASHREE" data-artist="Suranjan Khandalkar"
-								data-img="RAAGAS/Artist-thumb/SuranjanKhandalkar.webp"
-								href="RAAGAS/All Raga/21 RAAG PURIYA DHANASHREE by SURANJAN KHANDALKAR.mp3"
-								class="single-item__cover">
+							<img src="RAAGAS/Artist-thumb/MandarGadgil.webp" alt="Mandar Gadgil" loading="lazy">
+							<a href="javascript:void(0)" class="single-item__cover yt-item" data-playlist="Midnight"
+								data-video-id="ZplcXXgs4y8" data-title="RAAG ABHOGI" data-artist="Mandar Gadgil"
+								data-img="RAAGAS/Artist-thumb/MandarGadgil.webp">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
 								</svg>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
+										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
 								</svg>
 							</a>
 						</div>
 						<div class="album__title">
-							<h3>RAAG PURIYA DHANASHREE</h3>
-							<span><a href="Artist_SuranjanKhandalkar.html">Suranjan Khandalkar</a></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6 col-sm-4 col-lg-2">
-					<div class="album">
-						<div class="album__cover">
-							<img src="RAAGAS/Artist-thumb/RaghunandanPanshikar.webp" alt="RaghunandanPanshikar"
-								loading="lazy">
-							<a data-playlist data-title="RAAG HANSADHWANI" data-artist="Raghunandan Panshikar"
-								data-img="RAAGAS/Artist-thumb/RaghunandanPanshikar.webp"
-								href="RAAGAS/All Raga/32 RAAG HANSADHWANI by RAGHUNANDAN PANSHIKAR.mp3"
-								class="single-item__cover">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1 1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6 0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" />
-								</svg>
-							</a>
-						</div>
-						<div class="album__title">
-							<h3>RAAG HANSADHWANI</h3>
-							<span><a href="Artist_RaghunandanPanshikar.html">Raghunandan Panshikar</a></span>
+							<h3>RAAG ABHOGI</h3>
+							<span><a href="Artist_MandarGadgil.html">Mandar Gadgil</a></span>
 						</div>
 					</div>
 				</div>
@@ -965,7 +699,7 @@
 
 	<!-- footer -->
 	<footer class="footer">
-		<small class="footer__copyright">Â© INCLAM, 2022. CREATED BY, <a href="https://probus.co.in/" target="_blank">
+		<small class="footer__copyright">© INCLAM, 2022. CREATED BY, <a href="https://probus.co.in/" target="_blank">
 				PROBUS STUDIO.</a>
 		</small>
 	</footer>
@@ -983,88 +717,86 @@
 	<script src="js/plyr.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/search.js"></script>
-    <!-- updated js for video player By Akashkumbhar Jan2026 -->
-    <script>
-        const ytPlayer = document.getElementById("ytPlayer");
-        const playerTitle = document.getElementById("playerTitle");
-        const playerArtist = document.getElementById("playerArtist");
-        const playerCover = document.getElementById("playerCover");
+	<!-- updated js for video player By Akashkumbhar Jan2026 -->
+	<script>
+		const ytPlayer = document.getElementById("ytPlayer");
+		const playerTitle = document.getElementById("playerTitle");
+		const playerArtist = document.getElementById("playerArtist");
+		const playerCover = document.getElementById("playerCover");
 
-        document.querySelectorAll(".yt-item").forEach(item => {
-            item.addEventListener("click", () => {
+		document.querySelectorAll(".yt-item").forEach(item => {
+			item.addEventListener("click", () => {
 
-                /* âœ… CHECK STATE FIRST */
-                const isActive = item.classList.contains("active");
-                const isPlaying = item.classList.contains("play");
+				/* CHECK STATE FIRST */
+				const isActive = item.classList.contains("active");
+				const isPlaying = item.classList.contains("play");
 
-                /* reset all items */
-                document.querySelectorAll(".yt-item").forEach(el => {
-                    el.classList.remove("active", "play", "pause");
-                });
+				/* reset all items */
+				document.querySelectorAll(".yt-item").forEach(el => {
+					el.classList.remove("active", "play", "pause");
+				});
 
-                /* same item clicked again â†’ pause UI only */
-                if (isActive && isPlaying) {
-                    item.classList.add("active", "pause");
-                    return;
-                }
+				/* same item clicked again -> pause UI only */
+				if (isActive && isPlaying) {
+					item.classList.add("active", "pause");
+					return;
+				}
 
-                /* play state */
-                item.classList.add("active", "play");
+				/* play state */
+				item.classList.add("active", "play");
 
-                ytPlayer.src =
-                    "https://www.youtube.com/embed/" +
-                    item.dataset.videoId +
-                    "?autoplay=1&rel=0";
+				ytPlayer.src =
+					"https://www.youtube.com/embed/" +
+					item.dataset.videoId +
+					"?autoplay=1&rel=0";
 
-                playerTitle.textContent = item.dataset.title;
-                playerArtist.textContent = item.dataset.artist;
+				playerTitle.textContent = item.dataset.title;
+				playerArtist.textContent = item.dataset.artist;
 
-                openPlayer();
-            });
-        });
+				openPlayer();
+			});
+		});
 
-        /* ======================
-           PLAYER OPEN / CLOSE
-        ====================== */
+		/* ======================
+		   PLAYER OPEN / CLOSE
+		====================== */
 
-        const player = document.querySelector(".player");
-        const toggleBtn = document.querySelector(".player_openclose_btn");
+		const player = document.querySelector(".player");
+		const toggleBtn = document.querySelector(".player_openclose_btn");
 
-        let isOpen = false;
+		let isOpen = false;
 
-        function openPlayer() {
-            if (isOpen) return;
+		function openPlayer() {
+			if (isOpen) return;
 
-            player.classList.add("player--open");
-            player.style.height = player.scrollHeight + "px";
-            isOpen = true;
-        }
+			player.classList.add("player--open");
+			player.style.height = player.scrollHeight + "px";
+			isOpen = true;
+		}
 
-        function closePlayer() {
-            player.style.height = player.scrollHeight + "px";
+		function closePlayer() {
+			player.style.height = player.scrollHeight + "px";
 
-            requestAnimationFrame(() => {
-                player.style.height = "0px";
-            });
+			requestAnimationFrame(() => {
+				player.style.height = "0px";
+			});
 
-            player.classList.remove("player--open");
-            isOpen = false;
-        }
+			player.classList.remove("player--open");
+			isOpen = false;
+		}
 
-        /* toggle on button click */
-        toggleBtn.addEventListener("click", () => {
-            isOpen ? closePlayer() : openPlayer();
-        });
+		/* toggle on button click */
+		toggleBtn.addEventListener("click", () => {
+			isOpen ? closePlayer() : openPlayer();
+		});
 
-        /* after open animation â†’ allow auto height */
-        player.addEventListener("transitionend", () => {
-            if (isOpen) {
-                player.style.height = "auto";
-            }
-        });
-    </script>
+		/* after open animation -> allow auto height */
+		player.addEventListener("transitionend", () => {
+			if (isOpen) {
+				player.style.height = "auto";
+			}
+		});
+	</script>
 </body>
 
 </html>
-
-
