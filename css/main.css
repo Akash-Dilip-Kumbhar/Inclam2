@@ -7275,8 +7275,9 @@ display: block;
 
 .title {
   font-family: "Alegreya Sans", sans-serif;
-  font-weight: 400;
-  margin: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+font-size: 1.5rem;
 }
 
 .listinput {

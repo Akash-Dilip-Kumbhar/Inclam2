@@ -11,24 +11,6 @@ $processedFiles = @(
 
 $webRoot = "https://inclam.com/"
 
-function Fix-Mojibake($content) {
-    $replacements = @{
-        'â—' = '●';
-        'â–¼' = '▼';
-        'â€“' = '–';
-        'â†’' = '→';
-        'â–²' = '▲';
-        'Â©' = '©';
-        'Ã©' = 'é';
-        'Ã ' = 'à';
-        'â‚¬' = '€'
-    }
-    foreach ($old in $replacements.Keys) {
-        $content = $content.Replace($old, $replacements[$old])
-    }
-    return $content
-}
-
 function Update-File($filepath) {
     $filename = [System.IO.Path]::GetFileName($filepath)
     if ($processedFiles -contains $filename) {
@@ -67,10 +49,16 @@ function Update-File($filepath) {
     }
     $description += " on Inclam."
 
+    # Prepare Keywords
+    $keywords = "$artistName, Indian Classical Music, Vocalist, Raaga, Inclam"
+    if ($raagaKeywords) {
+        $keywords += ", $raagaKeywords"
+    }
+
     # Meta Tags
     $metaTags = @"
     <meta name="description" content="$description">
-    <meta name="keywords" content="$artistName, Indian Classical Music, Vocalist, Raaga, Inclam$($if($raagaKeywords){", $raagaKeywords"})">
+    <meta name="keywords" content="$keywords">
     <meta name="author" content="Probus Software">
     <title>$artistName - Indian Classical Vocalist | Inclam</title>
 
@@ -90,15 +78,43 @@ function Update-File($filepath) {
 
     $content = $content -replace 'alt="Logo"', 'alt="Inclam Logo"'
     
-    # Update Profile Image Alt - handling case where alt might be anything
+    # Update Profile Image Alt
     $content = [regex]::Replace($content, '(<div class="article__artist">\s*<img src=".*?" alt=")(.*?)(")', { 
         param($m) 
         $m.Groups[1].Value + "$artistName - Indian Classical Vocalist" + $m.Groups[3].Value 
     })
+    
+    # Update Raaga Image Alts
+    # Using regex to find the album cover 
+    $content = [regex]::Replace($content, '(<div class="album__cover">\s*<img src="RAAGAS/Artist-thumb/.*? webp?"\s*alt=")(.*?)(")', { 
+        param($m)
+        $m.Groups[1].Value + "$artistName - RAAGA PERFORMANCE" + $m.Groups[3].Value
+    })
 
-    # Fix Mojibake and Copyright
-    $content = Fix-Mojibake $content
+    # Fix Mojibake - Using explicit char codes to avoid script encoding issues
+    # â— (0xE2 0x97 0x8F) -> ●
+    $badBlackCircle = [string][char]0xE2 + [string][char]0x97 + [string][char]0x8F
+    $content = $content.Replace($badBlackCircle, "●")
+    
+    # â–¼ (0xE2 0x96 0xBC) -> ▼
+    $badTriangle = [string][char]0xE2 + [string][char]0x96 + [string][char]0xBC
+    $content = $content.Replace($badTriangle, "▼")
+
+    # â€“ (0xE2 0x80 0x93) -> –
+    $badDash = [string][char]0xE2 + [string][char]0x80 + [string][char]0x93
+    $content = $content.Replace($badDash, "–")
+    
+    # â†’ (0xE2 0x86 0x92) -> →
+    $badArrow = [string][char]0xE2 + [string][char]0x86 + [string][char]0x92
+    $content = $content.Replace($badArrow, "→")
+
+    # Copyright Fix
     $content = $content -replace '© INCLAM, 2022', '© Inclam 2024'
+    # Check for mojibake copyright Â©
+    $badCopyright = [string][char]0xC2 + [string][char]0xA9
+    if ($content.Contains($badCopyright)) {
+        $content = $content.Replace($badCopyright, "©")
+    }
 
     Set-Content $filepath $content -Encoding UTF8
     Write-Host "Updated $filename"
