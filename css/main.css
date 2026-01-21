@@ -3932,6 +3932,27 @@ display: block;
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
+.album__new {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 39;
+  pointer-events: none;
+  height: 20px;
+  width: auto;
+  padding: 0 8px;
+  border-radius: 8px;
+  background-color: #eb5757;
+  color: #fff;
+  font-size:10px;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
 
 .live__title {
   font-size: 20px;
