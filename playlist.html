@@ -4,10 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Classical Music Platform">
-    <meta name="keywords" content="Inclam">
-    <meta name="author" content=" Probus software">
-    <title>Inclam – Indian Classical Music Platform</title>
+    <meta name="description"
+        content="Discover curated Indian Classical Music playlists based on the time of day. Listen to Raagas specifically suggested for Pre-Dawn, Morning, Afternoon, and more.">
+    <meta name="keywords"
+        content="Inclam Playlist, Raagas by time, Indian Classical Music curated, Pre-Dawn Raagas, Morning Raagas">
+    <meta name="author" content="Probus Software">
+    <title>Playlist by Time - Indian Classical Music | Inclam</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inclam.com/playlist.html">
+    <meta property="og:title" content="Playlist by Time - Indian Classical Music | Inclam">
+    <meta property="og:description"
+        content="Curated Raaga playlists synchronized with the traditional Indian time cycle.">
+    <meta property="og:image" content="https://inclam.com/icon/Inclam.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -91,7 +101,7 @@
         <div class="header__content">
             <div class="header__logo">
                 <a href="index.html">
-                    <img src="img/logo/Inclam.png" alt="Logo">
+                    <img src="img/logo/Inclam.png" alt="Inclam Logo">
                 </a>
             </div>
 
@@ -130,7 +140,7 @@
         <!-- sidebar logo -->
         <div class="sidebar__logo">
             <a href="index.html">
-                <img src="img/logo/Inclam.png" alt="Logo">
+                <img src="img/logo/Inclam.png" alt="Inclam Logo">
             </a>
         </div>
         <!-- end sidebar logo -->
@@ -257,7 +267,7 @@
         </ul>
         <!-- end sidebar nav -->
     </div>
-    <!-- end sidebar -->    <!-- player -->
+    <!-- end sidebar --> <!-- player -->
     <div class="player">
         <button class="player_openclose_btn" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -1772,8 +1782,8 @@
     <script src="js/slider-radio.js"></script>
     <script src="js/jquery.inputmask.min.js"></script>
     <script src="js/plyr.min.js"></script>
-<script src="js/main.js"></script>
- 
+    <script src="js/main.js"></script>
+
     <script src="js/search.js"></script>
 
     <script>
@@ -1979,7 +1989,7 @@
         document.querySelectorAll(".yt-item").forEach(item => {
             item.addEventListener("click", () => {
 
-                /* âœ… CHECK STATE FIRST */
+                /* ✅ CHECK STATE FIRST */
                 const isActive = item.classList.contains("active");
                 const isPlaying = item.classList.contains("play");
 
@@ -2052,5 +2062,3 @@
 </body>
 
 </html>
-
-
