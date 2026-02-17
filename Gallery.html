@@ -29,17 +29,9 @@
     <link rel="stylesheet" href="css/slider-radio.css">
     <link rel="stylesheet" href="css/plyr.css">
     <link rel="stylesheet" href="css/main.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-    <link href="/css/jquery.fancybox.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-
-    <script src="/css/jquery.fancybox.js"></script>
-    <script src="/css/jquery.fancybox.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Lightbox2 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="icon/Inclam.png" sizes="64x64">
@@ -59,23 +51,35 @@
         }
 
         .imgbx {
-            width: 220px;
+            width: 100%;
             height: 180px;
             overflow: hidden;
             display: block;
+            border-radius: 10px;
         }
 
         .imgbx img {
-            max-width: 100%;
-            min-height: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.4s ease;
         }
 
-        .item {
-            transition: .5s ease-in-out;
+        .imgbx:hover img {
+            transform: scale(1.05);
         }
 
-        .item:hover {
-            filter: brightness(80%);
+        .gallery-item {
+            transition: all 0.4s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            filter: brightness(85%);
+        }
+
+        .gallery-item.hide {
+            display: none !important;
         }
 
         img {
@@ -84,6 +88,74 @@
 
         .col-sm-6 .col-md-3 {
             padding-left: 0px;
+        }
+
+        /* ===== FILTER BUTTONS ===== */
+        .gallery-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        .gallery-filters .filter-btn {
+            background: #222227;
+            color: #c0c0c0;
+            border: 2px solid transparent;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.35s ease;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            outline: none;
+        }
+
+        .gallery-filters .filter-btn:hover {
+            background: #2a2a30;
+            color: #fff;
+            border-color: #25a56a;
+        }
+
+        .gallery-filters .filter-btn.active {
+            background: linear-gradient(135deg, #25a56a, #1e8c59);
+            color: #fff;
+            border-color: #25a56a;
+            box-shadow: 0 4px 15px rgba(37, 165, 106, 0.35);
+        }
+
+        /* Lightbox2 overrides to match dark theme */
+        .lb-data .lb-caption {
+            font-size: 14px;
+            color: #c0c0c0;
+        }
+
+        .lb-data .lb-number {
+            color: #888;
+        }
+
+        .lb-nav a.lb-prev,
+        .lb-nav a.lb-next {
+            opacity: 0.8;
+        }
+
+        .lb-nav a.lb-prev:hover,
+        .lb-nav a.lb-next:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 576px) {
+            .gallery-filters {
+                justify-content: center;
+            }
+
+            .gallery-filters .filter-btn {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
         }
     </style>
     <!-- updated CSS for video player By Akashkumbhar Jan2026 -->
@@ -361,287 +433,365 @@
                 </div>
             </div>
             <!-- end title -->
+
+            <!-- Filter Buttons -->
+            <div class="col-12">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All Image Gallery</button>
+                    <button class="filter-btn" data-filter="opening-ceremony">Inclam Opening Ceremony</button>
+                    <button class="filter-btn" data-filter="festival">Festival Photo Gallery</button>
+                    <button class="filter-btn" data-filter="events">Events Gallery</button>
+                </div>
+            </div>
+            <!-- end Filter Buttons -->
+
             <div class="container-fluid">
-                <div class="row mt-4">
-                    <div class="item col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/1.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/1.jpg" loading="lazy" alt="1">
+                <div class="row mt-4" id="galleryGrid">
+
+                    <!-- ===== OPENING CEREMONY PHOTOS (1-12) ===== -->
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/1.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/1.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 1">
                         </a>
                     </div>
 
-                    <div class="item col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/2.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/2.jpg" loading="lazy" alt="2">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/2.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/2.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 2">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/3.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/3.jpg" loading="lazy" alt="3">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/3.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/3.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 3">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/4.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/4.jpg" loading="lazy" alt="4">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/4.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/4.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 4">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/5.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/5.jpg" loading="lazy" alt="5">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/5.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/5.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 5">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/6.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/6.jpg" loading="lazy" alt="7">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/6.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/6.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 6">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/7.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/7.jpg" loading="lazy" alt="7"></a>
-                    </div>
-
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/8.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/8.jpg" loading="lazy" alt="8">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/7.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/7.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 7">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/9.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/9.jpg" loading="lazy" alt="9">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/8.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/8.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 8">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/10.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/10.jpg" loading="lazy" alt="10">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/9.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/9.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 9">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/11.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/11.jpg" loading="lazy" alt="11">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/10.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/10.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 10">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/12.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/12.jpg" loading="lazy" alt="12">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/11.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/11.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 11">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/13.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/13.jpg" loading="lazy" alt="13">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3"
+                        data-category="opening-ceremony">
+                        <a href="img/InclamGallery/12.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Inclam Opening Ceremony">
+                            <img src="img/InclamGallery/12.jpg" loading="lazy" alt="Inclam Opening Ceremony Photo 12">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/14.2.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/14.2.jpg" loading="lazy" alt="14.2">
-                        </a>
-                    </div>
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/14.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/14.jpg" loading="lazy" alt="14">
+                    <!-- ===== FESTIVAL PHOTO GALLERY (13-28) ===== -->
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/13.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/13.jpg" loading="lazy" alt="Festival Photo 13">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/15.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/15.jpg" loading="lazy" alt="15">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/14.2.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/14.2.jpg" loading="lazy" alt="Festival Photo 14.2">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/16.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/16.jpg" loading="lazy" alt="16">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/14.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/14.jpg" loading="lazy" alt="Festival Photo 14">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/17.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/17.jpg" loading="lazy" alt="17">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/15.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/15.jpg" loading="lazy" alt="Festival Photo 15">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/18.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/18.jpg" loading="lazy" alt="18">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/16.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/16.jpg" loading="lazy" alt="Festival Photo 16">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/19.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/19.jpg" loading="lazy" alt="19">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/17.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/17.jpg" loading="lazy" alt="Festival Photo 17">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/20.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/20.jpg" loading="lazy" alt="20">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/18.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/18.jpg" loading="lazy" alt="Festival Photo 18">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/21.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/21.jpg" loading="lazy" alt="21">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/19.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/19.jpg" loading="lazy" alt="Festival Photo 19">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/22.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/22.jpg" loading="lazy" alt="22">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/20.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/20.jpg" loading="lazy" alt="Festival Photo 20">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/23.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/23.jpg" loading="lazy" alt="23">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/21.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/21.jpg" loading="lazy" alt="Festival Photo 21">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/24.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/24.jpg" loading="lazy" alt="24">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/22.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/22.jpg" loading="lazy" alt="Festival Photo 22">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/25.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/25.jpg" loading="lazy" alt="25">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/23.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/23.jpg" loading="lazy" alt="Festival Photo 23">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/26.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/26.jpg" loading="lazy" alt="26">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/24.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/24.jpg" loading="lazy" alt="Festival Photo 24">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/27.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/27.jpg" loading="lazy" alt="27">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/25.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/25.jpg" loading="lazy" alt="Festival Photo 25">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/28.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/28.jpg" loading="lazy" alt="28">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/26.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/26.jpg" loading="lazy" alt="Festival Photo 26">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/29.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/29.jpg" loading="lazy" alt="29">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/27.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/27.jpg" loading="lazy" alt="Festival Photo 27">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/30.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/30.jpg" loading="lazy" alt="30">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="festival">
+                        <a href="img/InclamGallery/28.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Festival Photo Gallery">
+                            <img src="img/InclamGallery/28.jpg" loading="lazy" alt="Festival Photo 28">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/31.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/31.jpg" loading="lazy" alt="31">
+                    <!-- ===== EVENTS GALLERY (29-46) ===== -->
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/29.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/29.jpg" loading="lazy" alt="Events Gallery Photo 29">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/32.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/32.jpg" loading="lazy" alt="32">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/30.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/30.jpg" loading="lazy" alt="Events Gallery Photo 30">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/33.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/33.jpg" loading="lazy" alt="33">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/31.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/31.jpg" loading="lazy" alt="Events Gallery Photo 31">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/34.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/34.jpg" loading="lazy" alt="34">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/32.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/32.jpg" loading="lazy" alt="Events Gallery Photo 32">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/35.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/35.jpg" loading="lazy" alt="35">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/33.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/33.jpg" loading="lazy" alt="Events Gallery Photo 33">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/36.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/36.jpg" loading="lazy" alt="36">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/34.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/34.jpg" loading="lazy" alt="Events Gallery Photo 34">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/37.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/37.jpg" loading="lazy" alt="37">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/35.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/35.jpg" loading="lazy" alt="Events Gallery Photo 35">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/38.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/38-thumb.jpg" loading="lazy" alt="38">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/36.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/36.jpg" loading="lazy" alt="Events Gallery Photo 36">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/39.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/39-thumb.jpg" loading="lazy" alt="39">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/37.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/37.jpg" loading="lazy" alt="Events Gallery Photo 37">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/40.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/40-thumb.jpg" loading="lazy" alt="40">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/38.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/38-thumb.jpg" loading="lazy" alt="Events Gallery Photo 38">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/41.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/41-thumb.jpg" loading="lazy" alt="41">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/39.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/39-thumb.jpg" loading="lazy" alt="Events Gallery Photo 39">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/42.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/42.jpg" loading="lazy" alt="42">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/40.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/40-thumb.jpg" loading="lazy" alt="Events Gallery Photo 40">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/43.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/43-thumb.jpg" loading="lazy" alt="43">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/41.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/41-thumb.jpg" loading="lazy" alt="Events Gallery Photo 41">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/44.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/44-thumb.jpg" loading="lazy" alt="44">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/42.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/42.jpg" loading="lazy" alt="Events Gallery Photo 42">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/45.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/45-thumb.jpg" loading="lazy" alt="45">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/43.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/43-thumb.jpg" loading="lazy" alt="Events Gallery Photo 43">
                         </a>
                     </div>
 
-                    <div class="items col-sm-6 col-xxl-2  col-lg-3  col-md-4 mb-3">
-                        <a href="img/InclamGallery/46.jpg" class="fancybox imgbx" data-fancybox="gallery">
-                            <img src="img/InclamGallery/46-thumb.jpg" loading="lazy" alt="46">
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/44.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/44-thumb.jpg" loading="lazy" alt="Events Gallery Photo 44">
                         </a>
                     </div>
+
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/45.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/45-thumb.jpg" loading="lazy" alt="Events Gallery Photo 45">
+                        </a>
+                    </div>
+
+                    <div class="gallery-item col-sm-6 col-xxl-2 col-lg-3 col-md-4 mb-3" data-category="events">
+                        <a href="img/InclamGallery/46.jpg" class="imgbx" data-lightbox="gallery"
+                            data-title="Events Gallery">
+                            <img src="img/InclamGallery/46-thumb.jpg" loading="lazy" alt="Events Gallery Photo 46">
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -669,6 +819,85 @@
     <script src="js/plyr.min.js"></script>
     <script src="js/search.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script>
+        // Lightbox2 options
+        lightbox.option({
+            'resizeDuration': 300,
+            'wrapAround': true,
+            'fadeDuration': 300,
+            'imageFadeDuration': 300,
+            'alwaysShowNavOnTouchDevices': true
+        });
+    </script>
+
+    <!-- Gallery Filter JS -->
+    <script>
+        (function () {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryGrid = document.getElementById('galleryGrid');
+
+            // Shuffle (Fisher-Yates) the children of the gallery grid
+            function shuffleGallery() {
+                const items = Array.from(galleryGrid.querySelectorAll('.gallery-item'));
+                for (let i = items.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    galleryGrid.appendChild(items[j]);
+                }
+            }
+
+            // Shuffle on initial page load so "All" view is always random
+            shuffleGallery();
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterVal = btn.getAttribute('data-filter');
+                    const galleryItems = galleryGrid.querySelectorAll('.gallery-item');
+
+                    // If "All" is selected, shuffle and show everything
+                    if (filterVal === 'all') {
+                        shuffleGallery();
+                    }
+
+                    galleryItems.forEach(item => {
+                        if (filterVal === 'all' || item.getAttribute('data-category') === filterVal) {
+                            item.classList.remove('hide');
+                        } else {
+                            item.classList.add('hide');
+                        }
+                    });
+
+                    // Update lightbox grouping so only visible images are navigable
+                    updateLightboxGroup(filterVal);
+                });
+            });
+
+            function updateLightboxGroup(filter) {
+                const galleryItems = galleryGrid.querySelectorAll('.gallery-item');
+                galleryItems.forEach(item => {
+                    const link = item.querySelector('a[data-lightbox]');
+                    if (link) {
+                        if (filter === 'all') {
+                            link.setAttribute('data-lightbox', 'gallery');
+                        } else {
+                            if (item.getAttribute('data-category') === filter) {
+                                link.setAttribute('data-lightbox', filter);
+                            } else {
+                                link.setAttribute('data-lightbox', 'gallery-hidden-' + item.getAttribute('data-category'));
+                            }
+                        }
+                    }
+                });
+            }
+        })();
+    </script>
+
     <!-- updated js for video player By Akashkumbhar Jan2026 -->
     <script>
         const ytPlayer = document.getElementById("ytPlayer");
@@ -688,7 +917,7 @@
                     el.classList.remove("active", "play", "pause");
                 });
 
-                /* same item clicked again â†’ pause UI only */
+                /* same item clicked again → pause UI only */
                 if (isActive && isPlaying) {
                     item.classList.add("active", "pause");
                     return;
@@ -742,7 +971,7 @@
             isOpen ? closePlayer() : openPlayer();
         });
 
-        /* after open animation â†’ allow auto height */
+        /* after open animation → allow auto height */
         player.addEventListener("transitionend", () => {
             if (isOpen) {
                 player.style.height = "auto";
